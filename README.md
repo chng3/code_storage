@@ -1,1 +1,3 @@
 整理写过的/学习过的/某处地方看到的代码库
+
+`ClassicBubbleCompanySample`文件夹中包含来自HFJS书中Chapter4讲数组时给泡泡公司老板打工时所写的代码以及例程
