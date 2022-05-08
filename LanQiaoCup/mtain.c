@@ -15,22 +15,25 @@
 
 */
 
-
+#include <time.h>
 #include <string.h>
 #include <stdio.h>
 #include <stdbool.h>
 
+
 int main(int argc, char const *argv[])
 {
+	clock_t start,end;
+	start =time(NULL);
 	// answer记录在区间内有多少个数满足,初始化为0
 	int answer = 0;
-	int leftNumber = 2022, righNumber = 2022222022;
+	unsigned int leftNumber = 2022, righNumber = 2022222022;
 	char p[11];
 	printf("本程序运行可能需要3分钟左右的时间,请耐心等待结果:\n");
 	// 遍历区间 [2022, 2022222022] 中的每一个数
-	for (int i = leftNumber; i <= righNumber; ++i) {
+	for (unsigned int i = leftNumber; i <= righNumber; ++i) {
 		//使用snprintf方法将整形数值转成字符串
-		snprintf(p,11,"%d", i);
+		snprintf(p,sizeof(p),"%d", i);
 
 		//条件一: 满足先单调不减 只需判断前(strlen(p)+1)/2 位数
 		bool one = true;
@@ -89,7 +92,8 @@ int main(int argc, char const *argv[])
 
 	}
 	printf("%d\n", answer);
-
+	end =time(NULL);  
+	printf("time=%f\n",difftime(end,start));
 }
 
 

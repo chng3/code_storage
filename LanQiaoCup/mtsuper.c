@@ -17,7 +17,7 @@ int main(int argc, char const *argv[])
 }
 
 int a(int n){
-	snprintf(p,11,"%d", n);
+	snprintf(p,sizeof(p),"%d", n);
 	for (int i = 1; i < (strlen(p) + 1) / 2; ++i)
 	{		
 		if (p[i] < p[i - 1]){
