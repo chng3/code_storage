@@ -1,3 +1,7 @@
-#### 储存写过/学习过/通过其他途径获取到的代码
+#### 此代码库用于保存我做题/解决问题产生/通过其他途径获取到的代码
 
-`ClassicBubbleCompanySample`文件夹中包含来自HFJS书中Chapter4讲数组时给泡泡公司老板打工时所写的代码以及例程
+`HeadFirstJavaSctipt` : 一本JavaScript书
+
+`LanQiaoCup`:蓝桥杯题目
+
+`Data-Structure&Algorithm-in-C`: 算法和数据结构-用C语言描述
