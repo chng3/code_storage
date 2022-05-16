@@ -2,13 +2,22 @@ body {
 	max-width: 800px;
 	margin: 0 auto;
 }
-
+p {
+	text-align: center;
+}
 
 main {
-
+	background-color: grey;
+	width: 190px;
+	margin: 0 auto;
 }
 
-.contact-form{
-
-	
+.contact-form {
+	display: flex;
+    align-content: center;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    flex-direction: column;
 }
+
+
