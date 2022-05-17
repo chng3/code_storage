@@ -1,0 +1,12 @@
+请输入5个字符串：
+flash
+action
+photo
+dream
+weaver
+排序结果如下：
+action
+dream
+flash
+photo
+weaver
