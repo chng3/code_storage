@@ -23,7 +23,14 @@
             let name = image.id;
             name = name + ".jpg";
             image.src = "images/" + name;
+            setTimeout(reblur, 2000, image);
 
+        }
+        
+        function reblur(image) {
+            let name = image.id;
+            name = name + "blur.jpg";
+            image.src = "images/" + name;
         }
         //TODO 实现点击显示正常图片，再一次点击显示模糊图片
     </script>
