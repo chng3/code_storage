@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title> Image Guess </title>
+    <style>
+        body {margin: 20px;}
+    </style>
+    <script>
+        window.onload = init;
+        function init(){
+            let image = document.getElementById("zero");
+            image.onclick = showAnswer;
+        }
+
+        function showAnswer(){
+            let image = document.getElementById("zero");
+            let message = document.getElementById("messages")
+            image.src="images/zero.jpg";
+            message.innerHTML = "这是一张清楚的蒙娜丽莎图像";
+
+        }
+    </script>
+</head>
+<body>
+<p id="messages">This is a blurred image of the Mona Lisa. You can click
+    on it now and see what happens!</p>
+<img id="zero" src="images/zeroblur.jpg" title="这是一张模糊蒙娜丽莎图像">
+</body>
+</html>
