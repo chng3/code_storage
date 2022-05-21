@@ -5,26 +5,37 @@
     <title> Image Guess </title>
     <style>
         body {margin: 20px;}
+        img {
+            margin: 20px;
+        }
     </style>
     <script>
         window.onload = init;
         function init(){
-            let image = document.getElementById("zero");
-            image.onclick = showAnswer;
+            let images = document.getElementsByTagName("img");
+            for(let i=0; i < images.length; i++){
+                images[i].onclick = showAnswer;
+            }
         }
 
-        function showAnswer(){
-            let image = document.getElementById("zero");
-            let message = document.getElementById("messages")
-            image.src="images/zero.jpg";
-            message.innerHTML = "这是一张清楚的蒙娜丽莎图像";
+        function showAnswer(eventObj){
+            let image = eventObj.target;
+            let name = image.id;
+            name = name + ".jpg";
+            image.src = "images/" + name;
 
         }
+        //TODO 实现点击显示正常图片，再一次点击显示模糊图片
     </script>
 </head>
 <body>
-<p id="messages">This is a blurred image of the Mona Lisa. You can click
-    on it now and see what happens!</p>
+<!--<p id="messages">这是蒙娜丽莎的模糊图像。您可以用鼠标左键单击然后看看会发生什么！</p>-->
 <img id="zero" src="images/zeroblur.jpg" title="这是一张模糊蒙娜丽莎图像">
+<img id="one" src="images/oneblur.jpg" alt="">
+<img id="two" src="images/twoblur.jpg" alt="">
+<img id="three" src="images/threeblur.jpg" alt="">
+<img id="four" src="images/fourblur.jpg" alt="">
+<img id="five" src="images/fiveblur.jpg" alt="">
+
 </body>
 </html>
