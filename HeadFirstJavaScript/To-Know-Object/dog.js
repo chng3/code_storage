@@ -1,4 +1,4 @@
-var dog = {
+const dog = {
     name: "Fido",
     weight: 20.2,
     age: 4,
@@ -6,12 +6,17 @@ var dog = {
     activity: "fetch balls"
 };
 
-var bark;
+let bark;
 if (dog.weight > 20){
     bark = "WOOF WOOF";
 } else {
     bark = "woof woof";
 }
 
-var speak = dog.name + " says " + bark + " when he wants to " + dog.activity;
+let speak = dog.name + " says " + bark + " when he wants to " + dog.activity;
+dog.spouse = "Hevy";
 console.log(speak);
+console.log(dog.spouse)
+console.log(dog)
+delete dog.spouse;
+console.log(dog);
