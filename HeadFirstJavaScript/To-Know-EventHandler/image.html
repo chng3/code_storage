@@ -10,11 +10,14 @@
         }
     </style>
     <script>
-        window.onload = init;
+        // window.onload = init;
         function init(){
             let images = document.getElementsByTagName("img");
             for(let i=0; i < images.length; i++){
+                // 同时监听鼠标点击和鼠标覆盖 触发showAnswer事件
                 images[i].onclick = showAnswer;
+                images[i].onmouseover = showAnswer;
+
             }
         }
 
@@ -32,7 +35,7 @@
             name = name + "blur.jpg";
             image.src = "images/" + name;
         }
-        //TODO 实现点击显示正常图片，再一次点击显示模糊图片
+
     </script>
 </head>
 <body>
@@ -45,4 +48,7 @@
 <img id="five" src="images/fiveblur.jpg" alt="">
 
 </body>
+<script>
+    window.onload = init;
+</script>
 </html>
