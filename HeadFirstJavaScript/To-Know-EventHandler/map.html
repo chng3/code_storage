@@ -9,6 +9,7 @@
         }
     </style>
     <script>
+        // 加载网页后初始化事件对象
         window.onload = init;
         function init(){
             let map = document.getElementById("map");
@@ -17,6 +18,7 @@
         
         function showCoords(eventObj) {
             let map = document.getElementById("coords");
+            // clintX 和 clintY ：鼠标相对于浏览器窗口左边缘和上边缘的距离，单位为像素。
             let x = eventObj.clientX;
             let y = eventObj.clientY;
             map.innerHTML = "Map coordinates: " + x
