@@ -6,12 +6,25 @@
     <script>
         const fiat = {
             color: "gery",
+            started: false,
+            start: function (){
+                this.started = true;
+            },
+            stop: function () {
+                this.started = false;
+            },
             drive: function (){
-                document.write("zoom, zoom!");
-            }
+                try {
+                    if(this.started) {
+                        alert("zoom, zoom!");
+                    }
+                } catch (e) {
+                    alert("你应该先启动发动机");
+                }
+            },
         }
 
-        window.onload = fiat.drive;
+        window.onload = fiat.drive
 
     </script>
 </head>
