@@ -12,6 +12,7 @@
             passengers: 2,
             convertible: false,
             mileage: 88000,
+            // 存储当前发动机状态的属性
             started: false,
             start: function () {
                 this.started = true;
@@ -29,8 +30,12 @@
             }
 
         }
+        fiat.drive();
+        fiat.start();
+        fiat.drive();
+        fiat.stop();
 
-        window.onload = fiat.drive;
+
 
     </script>
 </head>
