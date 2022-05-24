@@ -7,28 +7,28 @@
         const fiat = {
             color: "gery",
             started: false,
-            start: function (){
+            start: function () {
                 this.started = true;
             },
             stop: function () {
                 this.started = false;
             },
-            drive: function (){
-                try {
-                    if(this.started) {
-                        alert("zoom, zoom!");
-                    }
-                } catch (e) {
+            drive: function () {
+
+                if(this.started) {
+                    alert("zoom, zoom!");
+                } else {
                     alert("你应该先启动发动机");
                 }
-            },
+            }
+
         }
 
-        window.onload = fiat.drive
+        window.onload = fiat.drive;
 
     </script>
 </head>
 <body>
-    <p>测试</p>
+<p>测试</p>
 </body>
 </html>
