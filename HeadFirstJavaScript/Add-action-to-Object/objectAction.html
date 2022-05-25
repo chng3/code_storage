@@ -12,28 +12,56 @@
             passengers: 2,
             convertible: false,
             mileage: 88000,
+            fuel: 0,
             // 存储当前发动机状态的属性
             started: false,
             start: function () {
-                this.started = true;
+                if (this.fuel === 0) {
+                    alert("汽车没有油，请先加油再来启动发动机！");
+                } else {
+                    if (this.fuel < 3) {
+                        //当启动发动机时如果油数小于3公升，就触发温馨提示
+                        alert("此刻您的汽车油位已经低于3公升，仅剩余: " + this.fuel + "公升,请注意加油哦！")
+                    }
+                    this.started = true;
+                }
             },
             stop: function () {
                 this.started = false;
             },
             drive: function () {
 
-                if(this.started) {
-                    alert("zoom, zoom!");
+                if (this.fuel > 0) {
+                    if (this.started) {
+                        alert("zoom, zoom!");
+                        this.fuel -= 1;
+                    } else {
+                        alert("你应该先启动发动机")
+                    }
                 } else {
-                    alert("你应该先启动发动机");
+                    alert("汽车没有油，无法启动，请先加油");
+                    // 确保加油的时候发动机是关的
+                    this.stop();
                 }
+            },
+            addFuel: function (amount) {
+                this.fuel = this.fuel + amount;
+                alert("你成功加了：" + amount + " 公升油，" + "目前油位为：" + this.fuel);
             }
 
-        }
-        fiat.drive();
+        };
+
         fiat.start();
         fiat.drive();
-        fiat.stop();
+        fiat.addFuel(2);
+        fiat.start()
+        fiat.drive();
+        fiat.drive();
+        fiat.drive();
+        fiat.addFuel(2);
+        fiat.start();
+        fiat.drive();
+
 
 
 
