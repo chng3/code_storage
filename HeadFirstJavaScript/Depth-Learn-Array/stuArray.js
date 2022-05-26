@@ -1,3 +1,5 @@
 const stu = [
-    {sid: 3, sname: "Kevin" }, 2, 5];
-console.log(stu[0].sname);
+    {sid: 3, sname: "Kevin", math: 90},
+    {sid: 4, snam: "Halay", math: 60},
+    ];
+console.log(stu);
