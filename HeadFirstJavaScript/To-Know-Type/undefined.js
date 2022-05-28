@@ -1,4 +1,4 @@
 let x;
 if( x == undefined){
-    console
+    console.log("x is : " + x);
 }
