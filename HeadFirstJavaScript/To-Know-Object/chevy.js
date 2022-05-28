@@ -1,3 +1,4 @@
+// 使用"对象字面量（objecr literal syntax）法创建chevy对象"
 var chevy = {
     make: "Chevy",
     model: "Bel Air",
