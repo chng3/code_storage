@@ -7,5 +7,5 @@ let cadiParams = {
 let cadi = new Car(cadiParams);
 cadi.chrome = true;
 delete cadi.covnertible;
-console.log(cadi);
+console.log(cadi)
 
