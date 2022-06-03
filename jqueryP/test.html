@@ -1,25 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title></title>
-	
-	
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+	<style>
+		p {
+			color: red;
+			background: #000;
+
+		}
+		p:hover {
+			color: palevioletred;
+			background: yellow;
+		}
+	</style>
+    <script type="text/javascript" src="../node_modules/jquery/dist/jquery.js"></script>
+
 </head>
 <body>
-	<script type="text/javascript" src="node_modules/jquery/src/jquery.js"></script>
-	<script type="text/javascript">
-		
-		$( "target" ).click(function() {
-    console.log( "You clicked a paragraph!" );
-});
-	</script>
-<div id="target">
-	click here
-</div>
-<div id="other">
-	click
+
+<p>jquery just is just a JavaScript library.</p>
+
+<script>
+    $("p").click(function () {
+        $(this).slideUp();
+    });
+</script>
+
 </div>
 </body>
 </html>
