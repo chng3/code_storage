@@ -1,7 +1,12 @@
 .DS_Store
 *.exe
 
-//C 语言编译文件
+// C 语言编译文件
 *.o
 a.out
 .idea
+
+// node relative file
+node_modules
+package-lock.json
+package.json
