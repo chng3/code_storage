@@ -6,8 +6,8 @@
     <title></title>
 	<style>
 		p {
-			color: red;
-			background: #000;
+			color: aliceblue;
+			background: #a2b7ae;
 
 		}
 		p:hover {
@@ -20,10 +20,12 @@
 </head>
 <body>
 
-<p>jquery just is just a JavaScript library.</p>
+<p>jquery is just a JavaScript library.</p>
 
 <script>
+    // 对所有的 p 元素段落添加点击事件
     $("p").click(function () {
+        // 当点击 p 元素时，用滑动动画隐藏元素
         $(this).slideUp();
     });
 </script>
