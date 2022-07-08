@@ -95,7 +95,7 @@ h1 {
 
 p.login-callout {
     /*可选 给盒子增加边框阴影 使用 box-shadow 属性 */
-    /*box-shadow: 10px 10px 25px #cccccc15;*/
+    box-shadow: 10px 10px 25px #cccccc15;
     text-align: center;
     background-color: #2c3238;
     /*margin-top: 16px;*/
