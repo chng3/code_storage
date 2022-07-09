@@ -23,6 +23,8 @@ main h1{
 }
 
 .login,.login-callout, header, footer{
+    border-radius: 6px;
+    border: 1px solid #21262d;
     text-align: center;
     width: 250px;
     margin-top: 16px;
@@ -31,7 +33,7 @@ main h1{
     padding: 40px;
     padding-top: 15px;
     font-size: 20px;
-    box-shadow: 10px 10px 20px #cccccc15;
+    box-shadow: 10px 10px 20px #cccccc08;
     background-color: rgb(22, 27, 34);
 }
 .login input {
@@ -103,6 +105,7 @@ p.login-callout {
     /*!*margin-top: 16px;*!*/
     /*padding: 16px 16px;*/
     /*border-radius: 6px;*/
+    background-color: #0d1117;
     padding-bottom: 15px;
 
 
