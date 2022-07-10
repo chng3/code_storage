@@ -133,15 +133,10 @@ p.login-callout a:hover {
 
 
 
-/*头部设置*/
+/*头部和尾部设置*/
 header, footer{
     text-align: center;
     padding: 40px;
 
-
-}
-
-/*尾部设置*/
-footer {
 
 }
