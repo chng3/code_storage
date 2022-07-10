@@ -22,7 +22,7 @@ main h1{
     margin: auto;
 }
 
-.login,.login-callout, header, footer{
+.login,.login-callout {
     border-radius: 6px;
     border: 1px solid #21262d;
     text-align: center;
@@ -37,7 +37,6 @@ main h1{
     background-color: rgb(22, 27, 34);
 }
 .login input {
-    text-align: center;
     display: block;
     width: 180px;
     margin: 20px ;
@@ -47,6 +46,10 @@ main h1{
     color: #999b9d;
     /*把输入框的鼠标点击聚焦轮廓线去掉*/
     outline: none;
+}
+
+.login input {
+    text-align: center;
 }
 
 input[type=text], input[type=password] {
@@ -92,6 +95,13 @@ input[type=button]:hover {
     background-color: #32964e;
     transition: 0.5s;
 }
+.label-style {
+    margin-right: 118px;
+}
+
+.label-pwd-style {
+    margin-right: 145px;
+}
 
 h1 {
     text-align: center;
@@ -121,13 +131,12 @@ p.login-callout a:hover {
     color: #cccccc;
 }
 
-.header-main {
 
-
-}
 
 /*头部设置*/
-header {
+header, footer{
+    text-align: center;
+    padding: 40px;
 
 
 }
