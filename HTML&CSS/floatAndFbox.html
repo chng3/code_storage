@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .bigbox {
+            margin: 0 auto;
+            width: 1260px;
+            height: 300px;
+            background-color: gray;
+        }
+        ul {
+            list-style: none;
+        }
+
+        .box li {
+            float: left;
+            width: 310px;
+            height: 300px;
+            background-color: pink;
+            margin-right: 6.6px;
+        }
+        /*注意权重问题 对最后一个列表元素设置特定样式：不可直接写 .last-list */
+        .box li.last-list{
+            margin-right: 0;
+        }
+    </style>
+</head>
+<body>
+<div class="bigbox">
+    <ul class="box">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li class="last-list">4</li>
+    </ul>
+</div>
+</body>
+</html>
