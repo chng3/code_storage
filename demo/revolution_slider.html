@@ -1,30 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class=" yes-js js_active js">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>革命幻灯片动画练习</title>
-    <script type="text/javascript" src="assets/js/jquery-3.4.1.min.js"></script>
-    <script type="text/javascript" src="assets/js/jquery.themepunch.revolution.min.js"></script>
-    <script type="text/javascript" src="assets/js/jquery.themepunch.tools.min.js"></script>
     <link rel="stylesheet" type="text/css" href="assets/css/settings.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
 </head>
 <body>
-    <div class="fullwidthbanner-container rev_slider_wrapper" >
-        <div class="fullwidthabanner rev_slider">
+    <div id="rev_slider_wrapper" class="fullwidthbanner-container rev_slider_wrapper" data-alias="slider-homepage3" data-source="gallery">
+        <div id="rev_slider"class="fullwidthabanner rev_slider" style="display:none" data-version="5.4.8.3">
             <ul>
                 <li>
-                    <img src="./images/slider/slide1-hp1.jpg" alt="#">
+                    <img src="./images/slider/slide1-hp1.jpg" alt="#" data-bgposition="center center"
+                    data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="off" class="rev-slidebg"
+                    data-no-retina>
                     <div></div>
                     <div></div>
             
                 </li>
+                <li>
+                    <img src="./images/slider/slide1-hp2.jpg" alt="#">
+                    <div></div>
+                    <div></div>
+                </li>
             </ul>
         </div>
     </div>
+    <script type="text/javascript" src="assets/js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.themepunch.revolution.min.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.themepunch.tools.min.js"></script>
     <!-- jquery 自定义设置 rev_slider js脚本 -->
     <script src="assets/js/revolution_slider_settings.js"></script>
 </body>
