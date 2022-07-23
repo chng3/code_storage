@@ -5,7 +5,7 @@
 *.o
 a.out
 .idea
-
+.vscode
 // node relative file
 node_modules
 package-lock.json
