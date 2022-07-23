@@ -1,8 +1,8 @@
-#include <stdio.h>//ÕÒº«ĞÅµã±øÖĞµÄÇ°ÈıĞ¡µÄÖµ
+#include <stdio.h>//æ‰¾éŸ©ä¿¡ç‚¹å…µä¸­çš„å‰ä¸‰å°çš„å€¼
 int main(){
     int number;
     int count=0;
-    for(number=1;number<=1000&&count<3;number++){   //count<3¶¨Òå½áÊø
+    for(number=1;number<=1000&&count<3;number++){   //count<3å®šä¹‰ç»“æŸ
         if(number%3 ==2 && number%5 ==3 && number%7 ==2){
             ++count;
             if(count<=3){

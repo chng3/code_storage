@@ -1,4 +1,4 @@
-#include <stdio.h>//ÓÃwhile²ÂÊı×Ö-²¢´ò³ö²ÂÁË¼¸´Î
+#include <stdio.h>//ç”¨whileçŒœæ•°å­—-å¹¶æ‰“å‡ºçŒœäº†å‡ æ¬¡
 int main(){
     int answer=5,guess,time=0;
     while(time==0||guess!=answer){

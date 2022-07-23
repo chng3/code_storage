@@ -1,4 +1,4 @@
-#include <stdio.h>//Ê¹ÓÃif-else½øĞĞËÄÔòÔËËã
+#include <stdio.h>//ä½¿ç”¨if-elseè¿›è¡Œå››åˆ™è¿ç®—
 int main(){
     int num1,num2;
     char op;
@@ -12,7 +12,7 @@ int main(){
     } else if(op=='*'){
         answer=num1*num2;
     } else{
-        answer=(float)num1/num2;//½«num1½øĞĞÇ¿ÖÆ×ª»»³ÉfloatÀàĞÍ£¬Ê¹µÃ½á¹ûÎª¸¡µãÊı
+        answer=(float)num1/num2;//å°†num1è¿›è¡Œå¼ºåˆ¶è½¬æ¢æˆfloatç±»å‹ï¼Œä½¿å¾—ç»“æœä¸ºæµ®ç‚¹æ•°
     }
     printf("%f",answer);
     return 0;

@@ -1,4 +1,4 @@
-#include <stdio.h>//用两个变数的数值交换对三个变数做排序，观察结果归类主要动作2
+#include <stdio.h>//鐢ㄤ袱涓彉鏁扮殑鏁板�间氦鎹㈠涓変釜鍙樻暟鍋氭帓搴忥紝瑙傚療缁撴灉褰掔被涓昏鍔ㄤ綔2
 int main(){
     int a,b,c,t;
     printf("please enter three numbers:");

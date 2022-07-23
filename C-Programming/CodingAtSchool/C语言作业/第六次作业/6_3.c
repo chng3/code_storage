@@ -14,9 +14,9 @@ float zc(float a,float b)
 int main()
 {
 	float a,b,s,p;
-	printf("请输入长方形的边长a,b:");
+	printf("璇疯緭鍏ラ暱鏂瑰舰鐨勮竟闀縜,b:");
 	scanf("%f%f",&a,&b);
 	s=area(a,b);
 	p=zc(a,b);
-	printf("长方形的周长为p=%f,长方形的面积为s=%f",p,s);
+	printf("闀挎柟褰㈢殑鍛ㄩ暱涓簆=%f,闀挎柟褰㈢殑闈㈢Н涓簊=%f",p,s);
 }

@@ -1,10 +1,10 @@
-#include <stdio.h>//Ê¹ÓÃforÓï¾äÊµÏÖº«ĞÅµã±øÖĞµÄ×î´óÖµ
+#include <stdio.h>//ä½¿ç”¨forè¯­å¥å®ç°éŸ©ä¿¡ç‚¹å…µä¸­çš„æœ€å¤§å€¼
 int main(){
     int max,number;
     printf("MAX= ");
     scanf("%d",&max);
-    int answer=0;	//µ±ÖµÕÒ²»µ½Ê±,±£Ö¤ÄÜË³ÀûÍË³ö
-    for(number=1;number<=max;number++){         //´ÓĞ¡µ½´óÊı
+    int answer=0;	//å½“å€¼æ‰¾ä¸åˆ°æ—¶,ä¿è¯èƒ½é¡ºåˆ©é€€å‡º
+    for(number=1;number<=max;number++){         //ä»å°åˆ°å¤§æ•°
        if(number%3 ==2 && number%5 ==3 && number%7 ==2){
                 answer=number;
        }

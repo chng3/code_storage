@@ -1,4 +1,4 @@
-#include <stdio.h>//whileÓï¾ä
+#include <stdio.h>//whileè¯­å¥
 int main(){
     int count=0;
     while (count<3){

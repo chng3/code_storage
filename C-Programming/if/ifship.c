@@ -1,4 +1,4 @@
-#include <stdio.h>//对三个整数做排序,由小到大
+#include <stdio.h>//瀵逛笁涓暣鏁板仛鎺掑簭,鐢卞皬鍒板ぇ
 int main(){
     int a,b,c,t;
     printf("please enter three integers:");
@@ -19,6 +19,6 @@ int main(){
         t=a;a=b;b=t;
     }
 
-    printf("由小到大的顺序为:%d %d %d.\n",a,b,c);
+    printf("鐢卞皬鍒板ぇ鐨勯『搴忎负:%d %d %d.\n",a,b,c);
     return 0;
 }

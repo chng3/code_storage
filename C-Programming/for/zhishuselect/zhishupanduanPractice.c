@@ -1,17 +1,17 @@
-#include <stdio.h>//ÖÊÊıÅĞ¶ÏÁ·Ï°
+#include <stdio.h>//è´¨æ•°åˆ¤æ–­ç»ƒä¹ 
 int main(){
     int N;
     printf("N = ");
     scanf("%d",&N);
     int number;
-    int count=0;//Ò²¿ÉÒÔÉèÎª isPrime=1,ÏÂÃæÒ²¸Ã¸Ä±ä
+    int count=0;//ä¹Ÿå¯ä»¥è®¾ä¸º isPrime=1,ä¸‹é¢ä¹Ÿè¯¥æ”¹å˜
     for(number=2;number<N&&count==0;++number){
         if(N % number==0){
         count++;//isPrime=0;
         }
 
     }
-    if(count==0){  //if(isPrime)´ú±íÎªÕæÊ±,¼´1
+    if(count==0){  //if(isPrime)ä»£è¡¨ä¸ºçœŸæ—¶,å³1
         printf("YES\n");
     }else {
         printf("NO\n");

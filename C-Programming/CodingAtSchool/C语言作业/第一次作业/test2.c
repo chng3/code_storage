@@ -2,8 +2,8 @@
 int main()
 {
 	printf("************** \n");
-	printf("我是一名大学生! \n");
-	printf("我喜爱C语言! \n");
+	printf("鎴戞槸涓�鍚嶅ぇ瀛︾敓! \n");
+	printf("鎴戝枩鐖盋璇█! \n");
 	printf("**************  \n");
 	return 0;
 }

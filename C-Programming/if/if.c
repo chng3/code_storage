@@ -1,4 +1,4 @@
-#include <stdio.h>//²ÂÊı×ÖÓÎÏ·
+#include <stdio.h>//çŒœæ•°å­—æ¸¸æˆ
 int main(){
     int answer=8;
     int guess;

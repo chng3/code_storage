@@ -1,4 +1,4 @@
-#include <stdio.h>//Ê¹ÓÃif-else¶Ô¶à¸ö±äÊıÇó×î´óÖµ£¬Çø±ğÓÚifÓï¾ä¡£(Ê¡È¥ÖØ¸´)
+#include <stdio.h>//ä½¿ç”¨if-elseå¯¹å¤šä¸ªå˜æ•°æ±‚æœ€å¤§å€¼ï¼ŒåŒºåˆ«äºifè¯­å¥ã€‚(çœå»é‡å¤)
 int main(){
     int a,b,c,max;
     printf("please enter three integers:");
@@ -7,7 +7,7 @@ int main(){
         max=a;
     } else if(b>=a&&b>=c){
         max=b;
-    } else if(c>=a&&c>=b){  //if¿ÉÊ¡ÂÔ
+    } else if(c>=a&&c>=b){  //ifå¯çœç•¥
         max=c;
     }
     printf("%d",max);

@@ -1,4 +1,4 @@
-#include <stdio.h>//先将a,b,c中最大的数值换到变数c,后将a,b中较大的换到变数b
+#include <stdio.h>//鍏堝皢a,b,c涓渶澶х殑鏁板�兼崲鍒板彉鏁癱,鍚庡皢a,b涓緝澶х殑鎹㈠埌鍙樻暟b
 int main(){
     int a,b,c,t;
     printf("before: ");
