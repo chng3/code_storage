@@ -1,8 +1,9 @@
 .DS_Store
 *.exe
 
-// C 语言编译文件
-*.o
+// C 语言编译、执行文件,macOS C 语言执行文件没有后缀用 “*” 匹配
+*.o 
+*
 a.out
 .idea
 .vscode
