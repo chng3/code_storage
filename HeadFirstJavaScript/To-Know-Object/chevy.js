@@ -14,7 +14,7 @@ var cadi  = {
     passengers: 5,
     covnertible: false,
     mileage: 12892,
-    year: 1955
+    year: 1955,
     color: "棕褐色"
 };
 
