@@ -1,3 +1,0 @@
-a=32,b=6456988
-c=12.345000
-Press any key to continue
