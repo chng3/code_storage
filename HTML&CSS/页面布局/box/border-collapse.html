@@ -6,20 +6,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        table, th,td {
-            border:1px silid pink;
-            border-collapse: collapse;
+        th {
+            height: 35px;
         }
+        table {
+            width: 500px;
+            height: 249px;
+        }
+        table ,td,th {
+            margin: 0 auto;
+            border:1px solid pink;
+            border-collapse: collapse;
+            text-align: center;
+            font-size: 15px;
+        }
+
     </style>
    
 </head>
 <body>
-    <table>
+    <table cellspacing="0">
         <thead>
-            
+            <tr>
+                <th>商品id</th>
+                <th>商品名称</th>
+                <th>商品价格</th>
+            </tr>
         </thead>
         <tbody>
-
+            <tr>
+                <td>1</td>
+                <td>iPad Air 2</td>
+                <td>699</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>iPad 5</td>
+                <td>599</td>
+            </tr>
         </tbody>
     </table>
 </body>
