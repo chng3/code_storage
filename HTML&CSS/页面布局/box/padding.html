@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 500px;
+            height: 249px;
+            background-color: #fffe23;
+            /* 指定边写法 
+            padding-right: 20px;
+            padding-left: 20px;
+            padding-top: 10px;
+            padding-bottom: 10px; */
+            /* 复合写法 */
+            padding: 20px; /* 应用于所有边 */
+            padding: 20px 10px; /* 上边下边 | 左边右边 */
+            padding: 20px 10px 20px; /* 上边 | 左边右边 | 下边 */
+            padding: 20px 10px 20px 10px; /* 上边 | 右边 | 下边 | 左边 */
+        }
+    </style>
+</head>
+<body>
+    <div>
+        种一颗树最好的时间是十年前，其次是现在，<b>给盒子加了内边距之后，盒子会撑大</b>
+    </div>
+</body>
+</html>
