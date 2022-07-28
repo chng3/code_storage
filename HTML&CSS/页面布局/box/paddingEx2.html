@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        a:hover {
+            text-decoration: underline;
+        }
+        a {
+            text-decoration: none;
+        }
         ul {
             
             display: flex;
@@ -14,8 +20,9 @@
         
         }
         div {
+            height: 41px #fcfcfc;
             border-top: 3px solid #ff8500;
-            border-bottom: 1px solid grey;
+            border-bottom: 1px solid #edeef0;
         }
         ul li {
             padding: 0px 20px;
@@ -24,13 +31,15 @@
     </style>
 </head>
 <body>
+    <!-- 利用列表做导航栏 -->
+    <!-- 新浪网导航栏布局，利用设置导航栏菜单内边距实现每个菜单字体间距相同 -->
     <div>
         <ul>
-            <li>首页</li>
-            <li>分类</li>
-            <li>我的信息</li>
-            <li>购物车</li>
-            <li>关于</li>
+            <li><a href="#">首</a></li>
+            <li><a href="#">分类</a></li>
+            <li><a href="#">我的信息</a></li>
+            <li><a href="#">购物车</a></li>
+            <li><a href="#">关于好好喝</a></li>
         </ul>
     </div>
 </body>
