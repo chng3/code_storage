@@ -20,9 +20,10 @@
             text-align: center;
         }
         .nav a {
-            /* a 属于行内元素，此时必须要转换成 行内块元素 */
-            display: inline-block;
-            height:41px;
+            /* 当要为 a 元素设置高度时，由于 a 属于行内元素，此时必须要转换成“行内块元素”，再进行设置 */
+            display: inline-block; /* 设置成行内块元素 */
+            height: 41px;   /* 为 a 元素设置高度 */
+
             font-size: 12px;
             padding: 0 20px;
             color: #4c4c4c;
