@@ -5,6 +5,4 @@ function sayHelloWorld(){
     console.log(sMessage); // hello world!
 }
 
-sayHelloWorld();
-
-
+sayHelloWorld()
