@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <button id="bake">启动做饼干程序</button>
+    </div>
+</body>
+<script>
+// 初始化煮饭脚本
+window.onload = init;
+var cookies = {
+    instructions: "Please oven to 350...",
+    bake: function(time){
+        console.log("Baking the cookies");
+        setTimeout(done, time);
+    }
+
+};
+
+function init(){
+    // 等待用户触发点击事件初始化
+    var button = document.getElementById("bake");
+    // 监听用户鼠标点击事件
+    button.onclick = handleButton;
+}
+
+function handleButton() {
+    console.log("Time to bake the cookies");
+    cookies.bake(2500); // 2.5s 后启动做饼干程序
+}
+
+function done() {
+    alert("Cookies are ready, take them out to cool.");
+    console.log("cooling the cookies");
+    var cool = function (){
+        alert("Cookies are cool, time to eat!");
+    };
+    setTimeout(cool, 1000);
+}
+</script>
+</html>
