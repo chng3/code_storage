@@ -33,7 +33,9 @@
             setTimeout(function () {
                 alert("Cookies are ready, take them out to cool.");
                 console.log("cooling the cookies");
-                setTimeout(alert("Cookies are cool, time to eat!"), 1000);
+                setTimeout(function () {
+                    alert("Cookies are cool, time to eat!")
+                }, 1000);
             }, time);
         }
 
