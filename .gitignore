@@ -9,3 +9,6 @@
 node_modules
 package-lock.json
 package.json
+
+# 忽略测试文件夹
+测试文件/
