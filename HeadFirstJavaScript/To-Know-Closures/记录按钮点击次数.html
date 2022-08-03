@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click me!</title>
+    <style>
+        body,
+        button {
+            margin: 10px;
+        }
+
+        div {
+            padding: 10px;
+        }
+    </style>
+    <script>
+        // 使用事件处理程序来创建闭包
+        window.onload = init;
+        function init() {
+            let button = document.getElementById('clickme');
+
+            button.onclick = makeCounter();
+
+        }
+        function makeCounter() {
+            count = 0;
+            // 返回一个匿名函数（通过闭包）
+            return function () {
+                count++;
+                let message = document.getElementById("message");
+                // 向 div 元素写入消息
+                message.innerHTML = "You click me " + count + " times!"
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <button id="clickme">Click me!</button>
+    <div id="message"></div>
+</body>
+
+</html>
