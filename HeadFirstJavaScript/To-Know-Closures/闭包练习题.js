@@ -21,7 +21,7 @@ function multN(n) {
 }
 
 let doMultN = multN(7);
-console.log(doMultN(5));
+console.log(doMultN(5)); // > 35 
 
 
 
