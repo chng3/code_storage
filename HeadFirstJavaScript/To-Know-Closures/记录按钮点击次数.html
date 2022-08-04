@@ -26,7 +26,7 @@
             let button = document.getElementById('clickme');
             // 将一个闭包赋给按钮的属性 onclick
             button.onclick = function (){
-                // 这个函数包含三个自由变量：div、message 和 count 是一个闭包
+                // 这个函数包含三个自由变量div、message 和 count的环境，是一个闭包
                 count++;
                 div.innerHTML = message + count + " times!"
             }
