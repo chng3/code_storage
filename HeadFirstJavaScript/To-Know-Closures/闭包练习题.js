@@ -14,15 +14,20 @@ function makePassword(password) {
 
 
 // 练习题 2
+// function multN(n) {
+//     return function(m) {
+//         return (m*n)
+//     }
+// }
+
+// 另一种写法（采用 ES6 规范）
 function multN(n) {
-    return function(m) {
-        return (m*n)
-    }
+    // 如果箭头函数函数体只有一句话，那么这个句话可以不带大括号，而且这句话就是返回值（可以不用写return）
+    return (m => m*n);
 }
 
 let doMultN = multN(7);
-console.log(doMultN(5)); // > 35 
-
+console.log(doMultN(7)); // > 35 
 
 
 // 练习题 3
