@@ -1,46 +1,51 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title></title>
-	<style>
-		p {
-			color: aliceblue;
-			background: #a2b7ae;
+    <style>
+        p {
+            color: aliceblue;
+            background: #a2b7ae;
 
-		}
-		p:hover {
-			color: palevioletred;
-			background: yellow;
-		}
-	</style>
-<!--引入 jquery 库，使用的是本地环境中的相对地址-->
+        }
+
+        p:hover {
+            color: palevioletred;
+            background: yellow;
+        }
+    </style>
+    <!--引入 jquery 库，使用的是本地环境中的相对地址-->
     <!-- <script type="text/javascript" src="../node_modules/jquery/dist/jquery.js"></script> -->
-    
-<!--引入 在线jquery 库，使用的是本地环境中的相对地址-->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <!--引入 在线jquery 库-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
 </head>
+
 <body>
 
-<p>jquery is just a JavaScript library.</p>
-<p>Ajax is a technique that combines multi tech</p>
-<span id="tip"></span>
+    <p>jquery is just a JavaScript library.</p>
+    <p>Ajax is a technique that combines multi tech</p>
+    <span id="tip"></span>
 
-<script>
-    // 对所有的 p 元素段落添加点击事件
-    $("p").click(function () {
-        // 当点击 p 元素时，用滑动动画隐藏元素,并调用 callBack 函数
-        $(this).slideUp(200,callBack());
-    });
+    <script>
+        // 对所有的 p 元素段落添加点击事件
+        $("p").click(function () {
+            // 当点击 p 元素时，用滑动动画隐藏元素,并调用 callBack 函数
+            $(this).slideUp(200, callBack());
+        });
 
-    function callBack(){
-      let message = document.getElementById("tip");
-      message.innerHTML = "你正在通过 jquery 中的 .click() API 隐藏元素";
-    }
-</script>
+        function callBack() {
+            let message = document.getElementById("tip");
+            message.innerHTML = "你正在通过 jquery 中的 .click() API 隐藏元素";
+        }
+    </script>
 
-</div>
+    </div>
 </body>
+
 </html>
