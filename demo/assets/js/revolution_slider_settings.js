@@ -29,9 +29,10 @@ var custom_js = {
             navigation: {
                 keyboardNavigation: "off",
                 keyboard_direction: "horizontal",
-                mouseScrollNavigation: "off",
+                mouseScrollNavigation: "true",
                 mouseScrollReverse: "default",
-                onHoverStop: "false",
+                // 控制当鼠标悬停在幻灯片上时是否停止播放幻灯片 默认开启 关掉使用 'off'
+                // onHoverStop: "off",
                 touch: {
                     touchenabled: "on",
                     touchOnDesktop: "off",
