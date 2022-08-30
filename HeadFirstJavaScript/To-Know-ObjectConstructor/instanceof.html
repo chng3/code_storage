@@ -9,13 +9,13 @@
 <body>
     <script type="text/javascript">
             function dogCatcher(obj) {
-                
+                return obj instanceof Dog
             }
 
             function Cat(name, breed, weight) {
                 this.name = name;
                 this.breed = breed;
-             this.weight = weight;
+                this.weight = weight;
             }
             var meow = new Cat("Meow", "Siamese", 10);
             var whiskers = new Cat("Whiskers", "Mixed", 12);
@@ -28,14 +28,18 @@
                     if (this.weight > 25) {
                         alert(this.name + " says Woof!");
                     } else {
+                        alert(this.name + " says Yip!");
                     }
                 };
-            } alert(this.name + " says Yip!");
-            var fluffy = new Dog("Fluffy", "Poodle", 30); var spot = new Dog("Spot", "Chihuahua", 10);
+            } 
+            var fluffy = new Dog("Fluffy", "Poodle", 30); 
+            var spot = new Dog("Spot", "Chihuahua", 10);
             var dogs = [meow, whiskers, fido, fluffy, spot];
             for (var i = 0; i < dogs.length; i++) {
                 if (dogCatcher(dogs[i])) {
                     console.log(dogs[i].name + " is a dog!");
+                } else {
+                    console.log(dogCatcher(dogs[i]));
                 }
             }
     </script>
