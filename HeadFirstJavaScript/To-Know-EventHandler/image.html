@@ -26,7 +26,6 @@
             let name = image.id;
             name = name + ".jpg";
             image.src = "images/" + name;
-            // TODO: 改进代码，利用闭包对其进行修改，避免向 setTimeout 传递第三个参数 -- 》 已做，待review
             // 这里将函数表达式用作实参向setTimeout传递的是一个闭包；这个函数它带有自由变量 image 绑定到 eventObj 对象中的target属性或者方法的环境
             setTimeout(function() {
                 let name = image.id;
