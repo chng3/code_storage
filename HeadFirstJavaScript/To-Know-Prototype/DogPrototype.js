@@ -44,3 +44,11 @@ fluffy.wag();
 spot.bark();
 spot.run();
 spot.wag();
+
+let barnaby = new Dog("Barnaby", "Basset Hound", 55);
+
+Dog.prototype.sit = function () {
+    console.log(this.name + " is now sitting");
+}
+
+barnaby.sit();
