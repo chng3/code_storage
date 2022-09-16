@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>spaceRobotPrototype</title>
+</head>
+
+<body>
+    <!-- TODO: 对照课本答案检查  -->
+    <script type="text/javascript">
+        // Robot 的构造函数
+        function Robot(name, year, owner) {
+            this.name = name;
+            this.year = year;
+            this.owner = owner;
+        }
+
+        Robot.prototype.maker = "ObjectsRUs";
+
+        Robot.prototype.speak = function () {
+            // alert("Warning warning!!");
+            console.log("Warning warning!!");
+        }
+
+        Robot.prototype.makeCoffee = function () {
+            // alert("Making coffee");
+            console.log("Making coffee");
+        }
+
+        Robot.prototype.blinkLights = function () {
+            // alert("Blink Blink!");
+            console.log("Blink Blink!");
+        }
+
+
+        function SpaceRobot(name, year, owner, homePlanet) {
+            // 使用构造函数call内置方法实现代码复用
+            Robot.call(this, name, year, owner);
+            this.homePlanet = homePlanet;
+        }
+
+        // 创建继承机器人原型的SpaceRobot实例
+
+        SpaceRobot.prototype = new Robot();
+
+        // 补全太空机器人的原型
+
+        SpaceRobot.prototype.speak = function () {
+            alert(this.name + " says Sir, If I may venture an opinion...");
+        }
+
+        SpaceRobot.prototype.pilot = function () {
+            alert(this.name + " says Thrusters? Are they important?");
+        }
+
+        let c3po = new SpaceRobot("C3PO", 1977, "Luke Skywalker", "Tatooine");
+        c3po.speak();
+        c3po.pilot();
+        console.log(c3po.name + " was made by " + c3po.maker);
+
+        let simon = new SpaceRobot("Simon", 2009, "Carla Diana", "Earth");
+        simon.makeCoffee();
+        simon.blinkLights();
+        simon.speak();
+    </script>
+</body>
+
+</html>

@@ -88,3 +88,5 @@ console.log(fido.hasOwnProperty("sitting"));
 
 // 输出Dog的原型
 console.log(Dog.prototype);
+
+
