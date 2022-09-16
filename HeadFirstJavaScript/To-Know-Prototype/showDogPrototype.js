@@ -26,6 +26,7 @@ Dog.prototype.wag = function () {
     console.log("Wag!");
 };
 
+// ShowDog 的构造函数
 function ShowDog(name, breed, weight, handler) {
     Dog.call(this, name, breed, weight);
     this.handler = handler    
@@ -59,9 +60,23 @@ ShowDog.prototype.groom = function () {
 }
 
 
-//TODO: 最后的测试
-
+// 最后的测试
+let fido = new Dog("Fido", "Mixed", 38);
+let fluffy = new Dog("FLuffy", "Poodle", 30);
+let sopt = new Dog("Spot", "Chihuahua", 10);
 let scotty = new ShowDog("scotty", "Scottish Terrier", 15, "Cookie");
+let beatrice = new ShowDog("Beatrice", "Pomeranian", 5, "Hamilton");
+
+fido.bark();
+fluffy.bark();
+sopt.bark();
+scotty.bark();
+beatrice.bark();
+
+scotty.gait("Walk");
+beatrice.groom();
+
+console.log("\t");
 
 // 测试表演犬
 scotty.stack();
@@ -69,7 +84,7 @@ scotty.bark();
 console.log(scotty.league);
 console.log(scotty.species);
 
-let fido = new Dog("Fido", "Mixed", 38);
+
 
 if (fido instanceof Dog) {
     console.log("Fido is a Dog");

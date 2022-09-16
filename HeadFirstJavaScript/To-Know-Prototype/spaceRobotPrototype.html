@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <!-- TODO: 对照课本答案检查  -->
+
     <script type="text/javascript">
         // Robot 的构造函数
         function Robot(name, year, owner) {
@@ -35,10 +35,11 @@
             console.log("Blink Blink!");
         }
 
-
+        // 太空人构造函数
         function SpaceRobot(name, year, owner, homePlanet) {
             // 使用构造函数call内置方法实现代码复用
             Robot.call(this, name, year, owner);
+            // 太空人实例特有的额外属性homePlanet
             this.homePlanet = homePlanet;
         }
 
