@@ -1,3 +1,6 @@
+// 1.1 使用原型
+
+// Dog 的构造函数
 function Dog(name, breed, weight) {
     this.name = name;
     this.breed = breed;
@@ -5,6 +8,9 @@ function Dog(name, breed, weight) {
 }
 
 console.log(Dog.prototype);
+
+// 通过构造函数Dog的属性prototype来访问原型对象
+// 将字符串"Canine" 赋给Dog原型的属性species
 Dog.prototype.species = "Canine";
 
 Dog.prototype.bark = function () {
@@ -79,3 +85,6 @@ console.log(spot.hasOwnProperty("species"));
 console.log(fido.hasOwnProperty("species"));
 console.log(spot.hasOwnProperty("sitting"));
 console.log(fido.hasOwnProperty("sitting"));
+
+// 输出Dog的原型
+console.log(Dog.prototype);
