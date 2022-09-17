@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>俗语检查器</title>
+</head>
+<body>
+    <script type="text/javascript">
+        // 利用对象扩展技巧扩展String原型 ： 添加一个cliche的方法；这个方法会在字符串包含一个众所周知的俗语时返回true。
+        String.prototype.cliche = function () {
+            let cliche = ["lock and load", "touch base", "open the kimono"];
+
+            for(let i=0; i<cliche.length;i++){
+
+                let index = this.indexOf(cliche[i]);
+                if(index >= 0){
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        // 测试代码
+        let sentences = ["I'll send my car around to pick you up.", "Let's touch base in the morning and see where we are", 
+                        "We don't want to open the kimono, we just want to inform them."];
+        for(let i=0; i<sentences.length;i++){
+            let phrase = sentences[i];
+            if(phrase.cliche()){
+                console.log("CLICHE ALERT: " + phrase);
+            }
+        }
+    </script>
+</body>
+</html>
