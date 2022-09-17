@@ -8,9 +8,42 @@
 </head>
 <body>
     <script type="text/javascript">
-        String.prototype.palindrome = function (str) {
+        // 对String内置对象的原型添加一个回文数判断方法palindrome: 将传入的this(这里指的是被调用的字符串对象)（只包含一个单词）进行回文数判断
+        String.prototype.palindrome = function () {
             
+                // 方法一：验证是否对称,利用双指针
+                // for (let i = 0; i < this.length / 2; i++) {
+                //     if (this[i] != this[this.length - 1 - i]) {
+                //         return false;
+                //     }
+                // }
+                // return true;
+
+                // 方法二：高阶解决方案 -- 将字符串转换为一个“字符数组”，其中包含字符串中的所有字符。接下来，我们反转该
+                // 数组中字符的排列顺序，再将其组合成一个字符串。如果原来的字符串与新字符串相同，就说明它是回文
+
+                let r = this.split("").reverse().join("");
+                return (r === this.valueOf());
+
         }
+
+        let phrases = ["eve", "kayak", "mom", "wow", "Not a palindrome"];
+
+        for(let i=0;i<phrases.length;i++){
+            let phrase = phrases[i];
+            if(phrase.palindrome()){
+                console.log("'" + phrase + "' is a palindrome.");
+            } else {
+                console.log("'" + phrase +  "' is not a palindrome.");
+            }
+        }
+        
+
+
+
+
+
+
     </script>
 </body>
 </html>
