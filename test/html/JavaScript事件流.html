@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="btn">点击</button>
+    <script type="text/javascript">
+        var btn = document.getElementById("btn");
+        var eventPhase = ["捕获阶段", "目标阶段", "冒泡阶段"];
+
+        document.body.addEventListener("click", function (event) {
+            var index = event.eventPhase;
+            console.log("document click处于" + eventPhase[index - 1]);//捕获阶段 1
+        }, true);
+        btn.addEventListener("click", function (event) {
+            var index = event.eventPhase;
+            console.log("button click处于" + eventPhase[index - 1]);//目标阶段 2
+        }, true);
+        document.body.addEventListener("click", function (event) {
+            var index = event.eventPhase;
+            console.log("document click处于" + eventPhase[index - 1]);//冒泡阶段 3
+        });
+
+    </script>
+</body>
+
+</html>
