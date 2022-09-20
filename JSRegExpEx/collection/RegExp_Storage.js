@@ -15,10 +15,34 @@ let hexColor = new RegExp(/#([0-9a-fA-F]{6}|[0-9a-fA-F]{3})/g)
 // 匹配时间 - 以24小时制 要求匹配： "23:59", "02:07", "7:9"
 let time = new RegExp(/^(0?[0-9]|1[0-9]|[2][0-3]):(0?[0-9]|[1-5][0-9])$/);
 
-// 匹配日期
-let date = new RegExp()
+// 匹配日期 - yyyy-mm-dd 要求匹配 2017-06-10
+// 思路：
+// [0-9]{4} - 匹配"年"
+// 0[1-9]|1[0-2] 匹配"月"
+// 0[1-9]|[12][0-9]|3[01] - 匹配日期
+let date = new RegExp(/^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])$/)
 
+// window 操作系统文件路径
+// F:\study\javascript\regex\regular expression.pdf
+// F:\study\javascript\regex\
+// F:\study\javascript
+// F:\
+// 思路：
+// 整体模式是：
+// 盘符:\文件夹\文件夹\文件夹\
+// [a-zA-Z]:\\ - 匹配"盘符:\" 其中“\” 需要用到转义符"\\"表示
+// [^\\:*<>|"?\r\n/]+\\ - 匹配“文件夹\”
+// ([^\\:*<>|"?\r\n/]+\\)* - “文件夹\” 可以出现任意次，所以添加“*”
+// ([^\\:*<>|"?\r\n/]+)? 路径的最后一部分可以是 "文件夹"，没有“\”
+let fileDir = new RegExp(/^[a-zA-Z]:\\([^\\:*<>|"?\r\n/]+\\)*([^\\:*<>|"?\r\n/]+)?$/)
+
+// 匹配 id
 
 
 // test
-console.log(time.test("7:9"));
+console.log(fileDir.test("F:\\study\\javascript\\regex\\regular expression.pdf"));
+console.log(fileDir.test("F:\\study\\javascript\\regex\\"));
+console.log(fileDir.test("F:\\study\\javascript"));
+console.log(fileDir.test("F:\\"));
+
+
