@@ -36,13 +36,23 @@ let date = new RegExp(/^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])$/)
 // ([^\\:*<>|"?\r\n/]+)? 路径的最后一部分可以是 "文件夹"，没有“\”
 let fileDir = new RegExp(/^[a-zA-Z]:\\([^\\:*<>|"?\r\n/]+\\)*([^\\:*<>|"?\r\n/]+)?$/)
 
-// 匹配 id
+// 匹配 id - 匹配如下 string0、string1 html源码格式字符，要求从string0中提取出 id="two", string1中提取出 id="container"
+string0 = '<div class="doneodn-2" id="two" id = "one" id="cdsjidnn"></div>'
+string1 = '<div id="container" class="main"></div>'
+
+// 涉及到回溯，效率低
+let id0 = new RegExp(/id=".*?"/)
+// 优化如下
+let id = new RegExp(/id="[^"]*"/)
 
 
 // test
-console.log(fileDir.test("F:\\study\\javascript\\regex\\regular expression.pdf"));
-console.log(fileDir.test("F:\\study\\javascript\\regex\\"));
-console.log(fileDir.test("F:\\study\\javascript"));
-console.log(fileDir.test("F:\\"));
+// 测试匹配 windows 操作系统文件路径
+// console.log(fileDir.test("F:\\study\\javascript\\regex\\regular expression.pdf"));
+// console.log(fileDir.test("F:\\study\\javascript\\regex\\"));
+// console.log(fileDir.test("F:\\study\\javascript"));
+// console.log(fileDir.test("F:\\"));
 
-
+// 测试 匹配 id
+// console.log(string0.match(id)[0]);
+// console.log(string1.match(id)[0]);
