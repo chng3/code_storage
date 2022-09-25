@@ -5,8 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        canvas {
+            border: 1px solid black;
+        }
+    </style>
+    <script type="text/javascript">
+        // js 脚本
+        window.onload = function () {
+
+        }
+        var selectObj = document.getElementById("backgroundColor")
+        var index = selectObj.selectedIndex
+        var bgColor = selectObj[index].value
+
+        var selectObj = document.getElementById("shape")
+        var index = selectObj.selectedIndex
+        var shape = selectObj[index].value
+
+        var selectObj = document.getElementById("foregroundColor")
+        var index = selectObj.selectedIndex
+        var fgColor = selectObj[index].value
+    </script>
 </head>
 <body>
+    <h1>TweetShirt</h1>
+    <canvas id="" width="600" height="200">
+        <p>请升级您的浏览器以至于正常使用</p>
+    </canvas>
     <form action="">
         <p>
             <label for="">选择背景颜色：</label>
@@ -32,12 +58,12 @@
             
         </p>
         <p>
-            <label for="">选择要分享的人：</label>
+            <label for="tweets">选择要分享的人：</label>
             <select name="" id="tweets">
             </select>
         </p>
         <p>
-            <button type="submit" id="previewbutton" value="Preview">预览</button>
+            <input type="button" id="previewButton" value="Preview">
         </p>
     </form>
 </body>
