@@ -11,15 +11,22 @@
         }
     </style>
     <script type="text/javascript">
-        // TODO: js 脚本
+        // TODO: 完善整个用户接口交互，包括选择文本
+        
+        // 浏览器初始化加载完毕后开始执行
         window.onload = function () {
             var button = document.getElementById("previewButton")
+            // 监听用户点击 preview 按钮，触发回调函数 previewHandler
             button.onclick = previewHandler
         }
 
         function previewHandler() {
             var canvas = document.getElementById("tshirtCanvas")
             var context = canvas.getContext("2d")
+            
+            // 每点击一次预览，重新渲染画布一次
+            fillBackgroundColor(canvas, context)
+
 
             var selectObj = document.getElementById("shape")
             var index = selectObj.selectedIndex
@@ -28,6 +35,7 @@
             console.log(shape);
 
             if(shape === "squares") {
+                // 每一次渲染20个方块
                 for (var squares = 0; squares < 20; squares++){
                     drawSquare(canvas, context)
                 }
@@ -41,15 +49,25 @@
             var y = Math.random() * canvas.height
             context.fillRect(x, y, w, w)
         }
-        // var selectObj = document.getElementById("backgroundColor")
-        // var index = selectObj.selectedIndex
-        // var bgColor = selectObj[index].value
+
+        function fillBackgroundColor(canvas, context) {
+            console.log("你调用了fillBackGroundColor这个函数");
+            var selectObj = document.getElementById("backgroundColor")
+            var index = selectObj.selectedIndex
+            var bgColor = selectObj[index].value
+            context.fillStyle = bgColor
+            context.fillRect(0, 0, 600, 200)
+        }
+        
+        
 
      
-
+        // 从用户获取选择的文本颜色值
         // var selectObj = document.getElementById("foregroundColor")
         // var index = selectObj.selectedIndex
         // var fgColor = selectObj[index].value
+
+
     </script>
 </head>
 <body>
