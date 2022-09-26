@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        canvas {
+            border: 1px solid black;
+        }
+    </style>
+    <script>
+        window.onload = testCircle;
+
+        // function testPath() {
+        //     const ctx = document.getElementById("path").getContext("2d")
+        //     ctx.beginPath()
+        //     ctx.moveTo(100, 150)
+        //     ctx.lineTo(250, 75)
+        //     ctx.lineTo(125, 30)
+        //     ctx.closePath()
+        //     ctx.lineWidth = 5
+        //     ctx.stroke()
+        //     ctx.fillStyle = "red"
+        //     ctx.fill()
+        // }
+
+        function testCircle() {
+            const ctx = document.getElementById("circle").getContext("2d")
+            // 画一个圆圈三步走
+            ctx.beginPath()
+            ctx.arc(100, 100, 75, 0, degreesToRadians(270), true)
+            ctx.stroke()
+            
+        }
+
+        // 度转换为弧度
+        function degreesToRadians(degrees) {
+            return (degrees * Math.PI)/180
+        }
+        
+
+    </script>
+</head>
+
+<body>
+    <canvas id="path" width="600" height="200"></canvas>
+
+    <canvas id="circle" width="600" height="200"></canvas>
+
+</body>
+
+</html>

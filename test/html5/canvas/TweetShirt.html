@@ -34,24 +34,46 @@
             // 控制台输出当前用户的形状选择
             console.log(shape);
 
-            if(shape === "squares") {
-                // 每一次渲染20个方块
+            if (shape === "squares") {
+                // 每一次点击预览按钮就渲染20个方块
                 for (var squares = 0; squares < 20; squares++){
                     drawSquare(canvas, context)
+                }
+            } else if (shape === "circles") {
+                for (let circle = 0; circle < 20; circle++) {
+                    drawCircle(canvas, context)
                 }
             }
         }
 
         function drawSquare(canvas, context) {
-            context.fillStyle = "lightblue"
+            context.fillStyle = "rgb(0, 173, 239)"
             var w = Math.floor(Math.random() * 40)
             var x = Math.random() * canvas.width
             var y = Math.random() * canvas.height
             context.fillRect(x, y, w, w)
         }
 
+        function drawCircle(canvas, context) {
+            var x = Math.random() * canvas.width
+            var y = Math.random() * canvas.height
+            var z =  Math.floor(Math.random() * 30)
+            context.beginPath()
+            context.arc(x, y, z, 0, degreesToRadians(360), true)
+            context.fillStyle = "lightblue"
+            context.fill()
+            context.stroke()
+        }
+
+        // 度转换为弧度
+        function degreesToRadians(degrees) {
+            return (degrees * Math.PI)/180
+        }
+
         function fillBackgroundColor(canvas, context) {
+            // 调试语句
             console.log("你调用了fillBackGroundColor这个函数");
+
             var selectObj = document.getElementById("backgroundColor")
             var index = selectObj.selectedIndex
             var bgColor = selectObj[index].value
