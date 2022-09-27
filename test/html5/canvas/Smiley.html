@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Draw SmileyFace</title>
+    <script>
+        window.onload = drawSmileyFace
+        
+        
+        function drawSmileyFace () {
+            var ctx = document.getElementById("smiley").getContext("2d")
+            
+            // 最外部的大圆圈 
+            ctx.beginPath()
+            ctx.arc(300, 300, 200, 0, degreesToRadians(360), true)
+            ctx.fillStyle = "#ffffcc"
+            ctx.fill()
+            ctx.stroke()
+
+            // 画两只眼睛（两个小圆圈）
+
+            // 第一个 左边的眼睛
+            ctx.beginPath()
+            ctx.arc(200, 250, 25, 0, degreesToRadians(360), true)
+            ctx.fillStyle = "#ffffcc"
+            ctx.fill()
+            ctx.stroke()
+
+            // 第二个 右边的眼睛
+            ctx.beginPath()
+            ctx.arc(400, 250, 25, 0, degreesToRadians(360), true)
+            ctx.fillStyle = "#ffffcc"
+            ctx.fill()
+            ctx.stroke()
+
+            // 画鼻子
+            ctx.beginPath()
+            ctx.moveTo(300, 300)
+            ctx.lineTo(300, 350)
+            ctx.stroke()
+
+            // 画嘴巴
+            ctx.beginPath()
+            ctx.arc(300, 350, 75, degreesToRadians(20), degreesToRadians(160), false)
+            ctx.stroke()
+
+        }
+
+        // 度转换为弧度
+        function degreesToRadians(degrees) {
+            radians = (degrees * Math.PI)/180;
+            return radians;
+        }
+    </script>
+</head>
+<body>
+    <canvas id="smiley" width="600" height="600">
+        <!-- 当浏览器不支持canvas的提示 -->
+        <p>You need canvas!</p>
+		<p>This example requires a browser that supports the
+		<a href="http://www.w3.org/html/wg/html5/">HTML5</a> 
+		&lt;canvas&gt; feature.</p>
+    </canvas>
+</body>
+</html>

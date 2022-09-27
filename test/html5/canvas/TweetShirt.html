@@ -11,7 +11,7 @@
         }
     </style>
     <script type="text/javascript">
-        // TODO: 完善整个用户接口交互，包括选择文本
+        // TODO: 完善整个用户接口交互，包括选择文本,对比示范编程
         
         // 浏览器初始化加载完毕后开始执行
         window.onload = function () {
@@ -34,6 +34,7 @@
             // 控制台输出当前用户的形状选择
             console.log(shape);
 
+            // 根据用户选择去执行画方形或者圆圈
             if (shape === "squares") {
                 // 每一次点击预览按钮就渲染20个方块
                 for (var squares = 0; squares < 20; squares++){
@@ -44,6 +45,9 @@
                     drawCircle(canvas, context)
                 }
             }
+
+            // 根据用户选择去执行
+            
         }
 
         function drawSquare(canvas, context) {
