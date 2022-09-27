@@ -11,7 +11,7 @@
         }
     </style>
     <script type="text/javascript">
-        // TODO: 完善整个用户接口交互，包括选择文本,对比示范编程
+        // TODO: 包括选择文本,对比示范编程
         
         // 浏览器初始化加载完毕后开始执行
         window.onload = function () {
@@ -46,8 +46,8 @@
                 }
             }
 
-            // 根据用户选择去执行
-            
+            // 根据用户选择去执行画文本
+            drawText(canvas, context)
         }
 
         function drawSquare(canvas, context) {
@@ -84,15 +84,26 @@
             context.fillStyle = bgColor
             context.fillRect(0, 0, 600, 200)
         }
-        
-        
 
-     
-        // 从用户获取选择的文本颜色值
-        // var selectObj = document.getElementById("foregroundColor")
-        // var index = selectObj.selectedIndex
-        // var fgColor = selectObj[index].value
+        // 在 canvas 中画文本
+        function drawText(canvas, context) {
+            var selectObj = document.getElementById("foregroundColor")
+            var index = selectObj.selectedIndex
+            var fgColor = selectObj[index].value
 
+            context.fillStyle = fgColor
+            context.font = "bold 1em sans-serif"
+            context.textAligh = "left"
+            context.fillText("我看见了这条微博", 20, 40)
+
+            // 在画布中间绘制 从 api 获取过来的文字内容
+
+            // 
+            context.font = "bold 1em sans-serif"
+            context.textAlign = "right"
+            context.fillText("and all I got was this lousy t-shirt!", canvas.width-20, canvas.height-40)
+
+        }
 
     </script>
 </head>
@@ -134,5 +145,8 @@
             <input type="button" id="previewButton" value="Preview">
         </p>
     </form>
+    
+    <!-- 失效的 -->
+    <!-- <script src="http://api.twitter.com/1/statuses/user_timeline/wickedsmartly.json?callback=updateTweets"></script> -->
 </body>
 </html>
