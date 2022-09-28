@@ -4,20 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>tweetshirt</title>
     <style>
         canvas {
             border: 1px solid black;
         }
     </style>
     <script type="text/javascript">
-        // TODO: 包括选择文本,对比示范编程
         
         // 浏览器初始化加载完毕后开始执行
         window.onload = function () {
             var button = document.getElementById("previewButton")
             // 监听用户点击 preview 按钮，触发回调函数 previewHandler
             button.onclick = previewHandler
+            // 调用makeImage 为画布增加点击事件处理程序
+            makeImage()
         }
 
         function previewHandler() {
@@ -32,7 +33,7 @@
             var index = selectObj.selectedIndex
             var shape = selectObj[index].value
             // 控制台输出当前用户的形状选择
-            console.log(shape);
+            console.log(shape)
 
             // 根据用户选择去执行画方形或者圆圈
             if (shape === "squares") {
@@ -48,6 +49,9 @@
 
             // 根据用户选择去执行画文本
             drawText(canvas, context)
+
+            // 在画布中放置图像
+            drawBird(canvas, context)
         }
 
         function drawSquare(canvas, context) {
@@ -76,7 +80,7 @@
 
         function fillBackgroundColor(canvas, context) {
             // 调试语句
-            console.log("你调用了fillBackGroundColor这个函数");
+            console.log("你调用了fillBackGroundColor这个函数")
 
             var selectObj = document.getElementById("backgroundColor")
             var index = selectObj.selectedIndex
@@ -87,31 +91,66 @@
 
         // 在 canvas 中画文本
         function drawText(canvas, context) {
-            var selectObj = document.getElementById("foregroundColor")
-            var index = selectObj.selectedIndex
-            var fgColor = selectObj[index].value
+            var selectObj = document.getElementById("foregroundColor");
+            var index = selectObj.selectedIndex;
+            var fgColor = selectObj[index].value;
 
-            context.fillStyle = fgColor
-            context.font = "bold 1em sans-serif"
-            context.textAligh = "left"
-            context.fillText("我看见了这条微博", 20, 40)
+            // 在画布的左上方位置描写
+            context.fillStyle = fgColor;
+            context.font = "bold 1em sans-serif";
+            context.textAlign = "left";
+            context.fillText("我看见了这条微博", 20, 40);
 
-            // 在画布中间绘制 从 api 获取过来的文字内容
+            // 在画布中间描写从用户选择的文字内容
+            // draw the tweet base on user's selectio
+            selectObj = document.getElementById("tweets");
 
-            // 
-            context.font = "bold 1em sans-serif"
-            context.textAlign = "right"
-            context.fillText("and all I got was this lousy t-shirt!", canvas.width-20, canvas.height-40)
+            // 获取对象中选择的元素的索引 - 通过访问元素对象中selectedIndex属性
+            var index = selectObj.selectedIndex;
 
+            var tweet = selectObj[index].value;
+            context.font = "italic 1.2em serif";
+            context.fillText(tweet, 30, 100);
+
+            // 在画布的右下方位置描写
+            context.font = "bold 1em sans-serif";
+            context.textAlign = "right";
+            context.fillText("这是我看过的最烂的T-shirt，没有之一",
+                canvas.width-20, canvas.height-40);
+
+        }
+
+        // 在画布上显示推特图标
+        function drawBird(canvas, context) {
+            // 创建一个新的图形对象
+            var twitterBird = new Image()
+            twitterBird.src = "twitterBird.png"
+            
+            // 监听图片加载，加载完毕后执行回调函数
+            twitterBird.onload = function () {
+                context.drawImage(twitterBird, 20, 120, 70, 70)
+            } 
+        }
+
+        // 在画布上点击生成png格式图片下载 - Firefox 浏览器可用，chrome 已经不支持此
+        function makeImage() {
+            var canvas = document.getElementById("tshirtCanvas")
+            canvas.onclick = function () {
+                window.location = canvas.toDataURL("image/png")
+            }
         }
 
     </script>
 </head>
 <body>
     <h1>TweetShirt</h1>
+
+    <!-- 画布元素开始 -->
     <canvas id="tshirtCanvas" width="600" height="200">
         <p>请升级您的浏览器以至于正常使用</p>
     </canvas>
+
+    <!-- 表单元素开始 -->
     <form action="">
         <p>
             <label for="">选择背景颜色：</label>
@@ -137,8 +176,11 @@
             
         </p>
         <p>
-            <label for="tweets">选择要分享的人：</label>
+            <label for="tweets">选择要分享的博文：</label>
             <select name="" id="tweets">
+                <option value="我要保护我的家庭！">我要保护我的家庭！</option>
+                <option value="我要让世界和平！">我要让世界和平！</option>
+                <option value="反对战争！">反对战争！</option>
             </select>
         </p>
         <p>
