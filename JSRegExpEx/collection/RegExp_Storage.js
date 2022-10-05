@@ -58,3 +58,4 @@ let id = new RegExp(/id="[^"]*"/)
 // console.log(string1.match(id)[0]);
 
 // TODO: 匹配密码
+/((?=.*[0-9])(?=.*[a-z])|(?=.*[0-9])(?=.*[A-Z])|(?=.*[a-z])(?=.*[A- Z]))^[0-9A-Za-z]{6,12}$/
