@@ -45,8 +45,11 @@ let id0 = new RegExp(/id=".*?"/)
 // 优化如下
 let id = new RegExp(/id="[^"]*"/)
 
+// 匹配密码 要求：密码长度 6-12 位，由数字、小写字符和大写字母组成，但必须至少包括 2 种字符。
+var regex = /(?!^[0-9]{6,12}$)(?!^[a-z]{6,12}$)(?!^[A-Z]{6,12}$)^[0-9A-Za-z]{6,12}$/;
 
 // test
+
 // 测试匹配 windows 操作系统文件路径
 // console.log(fileDir.test("F:\\study\\javascript\\regex\\regular expression.pdf"));
 // console.log(fileDir.test("F:\\study\\javascript\\regex\\"));
@@ -57,5 +60,10 @@ let id = new RegExp(/id="[^"]*"/)
 // console.log(string0.match(id)[0]);
 // console.log(string1.match(id)[0]);
 
-// TODO: 匹配密码
-/((?=.*[0-9])(?=.*[a-z])|(?=.*[0-9])(?=.*[A-Z])|(?=.*[a-z])(?=.*[A- Z]))^[0-9A-Za-z]{6,12}$/
+// 测试 匹配密码 
+// console.log( regex.test("1234567") ); // false 全是数字
+// console.log( regex.test("abcdef") ); // false 全是小写字母
+// console.log( regex.test("ABCDEFGH") ); // false 全是大写字母
+// console.log( regex.test("ab23C") ); // false 不足6位 
+// console.log( regex.test("ABCDEF234") ); // true 大写字母和数字 
+// console.log( regex.test("abcdEF234") ); // true 三者都有
