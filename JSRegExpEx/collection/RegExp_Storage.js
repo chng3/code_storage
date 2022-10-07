@@ -61,7 +61,7 @@ var pwd = new RegExp(/(?!^[0-9]{6,12}$)(?!^[a-z]{6,12}$)(?!^[A-Z]{6,12}$)^[0-9A-
 // console.log(string1.match(id)[0]);
 
 // 测试 匹配密码 
-console.log( pwd.test("1234567") ); // false 全是数字
+console.log( pwd.test("1234567") ); // false 全
 console.log( pwd.test("abcdef") ); // false 全是小写字母
 console.log( pwd.test("ABCDEFGH") ); // false 全是大写字母
 console.log( pwd.test("ab23C") ); // false 不足6位 
