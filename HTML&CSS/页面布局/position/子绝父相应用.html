@@ -5,8 +5,65 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>子绝父相应用场景 - 页面广告轮播图盒子布局设计</title>
+    <style>
+        .listbox {
+
+            margin: 0 auto;
+            width: 1002px;
+            height: 205px;
+            background-color: skyblue;
+        }
+        .box {
+            /* 父相 */
+            position: relative;
+            float: left;
+            width: 198px;
+            height: 205px;
+            margin-left: 2px;
+            background-color: pink;
+        }
+        .l_nav {
+            /* 子绝 */
+            position: absolute;
+            top: 95px;
+            width: 50px;
+            height: 15px;
+            background-color: #fff;
+        }
+        .r_nav {
+            position: absolute;
+            top: 95px;
+            left: 148px;
+            width: 50px;
+            height: 15px;
+            background-color: #fff;
+        }
+
+
+    </style>
 </head>
 <body>
-    
+    <div class="listbox">
+        <div class="box">
+            <div class="l_nav"></div>
+            <div class="r_nav"></div>
+        </div>
+        <div class="box">
+            <div class="l_nav"></div>
+            <div class="r_nav"></div>
+        </div>
+        <div class="box">
+            <div class="l_nav"></div>
+            <div class="r_nav"></div>
+        </div>
+        <div class="box">
+            <div class="l_nav"></div>
+            <div class="r_nav"></div>
+        </div>
+        <div class="box">
+            <div class="l_nav"></div>
+            <div class="r_nav"></div>
+        </div>
+    </div>
 </body>
 </html>
