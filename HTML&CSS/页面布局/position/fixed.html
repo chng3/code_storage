@@ -4,9 +4,39 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>fixed 绝对定位</title>
+    <title>fixed 固定定位</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .main {
+            margin: 0 auto;
+            width: 700px;
+            height: 1500px;
+            background-color: #aaa;
+            text-align: center;
+        }
+        .top {
+            /* 使用固定定位 */
+            position: fixed;
+            top: 800px;
+            /* 固定在版心右侧位置,使用小算法 */
+            left: 50%;
+            margin-left: 356px;
+
+            width: 51px;
+            height: 34px;
+            background-color: pink;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-    <!-- TODO:  -->
+    <div class="main">
+        主版块 
+    </div>
+    <div class="top">置顶</div>
+    
 </body>
 </html>
