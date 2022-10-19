@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>定位的叠放次序 z-index</title>
+    <style>
+        .box {
+            position: absolute;
+            top: 20px;
+            width: 200px;
+            height: 100px;
+            
+        }
+        .xiaoxiong {
+            /* 叠放次序 */
+            z-index: 1;
+            background-color: pink;
+        }
+        .daxiong {
+            /* 将大熊的盒子提到最前面通过z-index设置 */
+            z-index: 2;
+            left: 100px;
+            top: 100px;
+            background-color: red;
+        }
+        .guangtouqiang {
+            left: 50px;
+            top: 50px;
+            background-color: blue;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box xiaoxiong">小熊</div>
+    <div class="box daxiong">大熊</div>
+    <div class="box guangtouqiang">光头强</div>
+    
+</body>
+</html>

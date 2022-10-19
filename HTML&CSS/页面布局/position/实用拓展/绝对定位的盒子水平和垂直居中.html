@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>绝对定位的盒子水平和垂直居中</title>
+    <style>
+        .box {
+            position: absolute;
+            /* 通过外边距设置水平居中失效 */
+            /* margin: 0 auto; */
+            /* 水平居中实现方法： */
+            /* 1. 让left走浏览器的50% */
+            left: 50%;
+            /* 2. 让盒子往左方向走自身宽度的一半 */
+            margin-left: -150px;
+
+            /* 垂直居中实现方法 */
+            /*  */
+            top: 50%;
+            margin-top: -100px;
+            width: 300px;
+            height: 200px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">我要水平垂直居中</div>
+</body>
+</html>
