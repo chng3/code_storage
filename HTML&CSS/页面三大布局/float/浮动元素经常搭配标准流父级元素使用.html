@@ -8,6 +8,7 @@
 
     <title>Document</title>
     <style>
+        /* 清除 ul 中的默认内外边距 */
         * {
             margin: 0;
             padding: 0;
@@ -19,10 +20,12 @@
             background-color: gray;
         }
         ul {
+            /* 清除掉无序列表开头的小黑点 */
             list-style: none;
         }
 
         .box li {
+            /* 浮动 */
             float: left;
             width: 310px;
             height: 300px;
@@ -37,6 +40,7 @@
 </head>
 <body>
 <div class="bigbox">
+    <!-- 用无序列表做里面水平排放的盒子 -->
     <ul class="box">
         <li>1</li>
         <li>2</li>
