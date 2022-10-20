@@ -5,8 +5,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>浮动元素练习二</title>
+    <style>
+        /* 清除无序列表默认的内外边距和小黑点 */
+        * {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .box {
+            margin: auto;
+            width: 1240px;
+            height: 285px;
+            background-color: pink;
+        }
+        /* 每一个列表都向左浮动 */
+        li {
+            float: left;
+            margin-right: 14px;
+            width: 296px;
+            height: 285px;
+            background-color: skyblue;
+        }
+    </style>
 </head>
 <body>
-    <!-- TODO:  -->
+    <div class="box">
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+        </ul>
+    </div>
 </body>
 </html>

@@ -5,8 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>浮动元素练习一</title>
+    <style>
+        .box {
+            width: 1226px;
+            height: 460px;
+            background-color: gray;
+            margin: 0 auto;
+        }
+        /* “>” 子孩子选择逻辑符号 */
+        .box>div {
+            /* 向左浮动 */
+            float: left;
+        }
+        .left {
+            width: 234px;
+            height: 460px;
+            background-color: #3f3d3d;
+        }
+        .right {
+            width: 992px;
+            height: 460px;
+            background-color: pink;
+        }
+    </style>
 </head>
 <body>
-    <!-- TODO:  -->
+   <div class="box">
+    <div class="left"></div>
+    <div class="right"></div>
+   </div>
 </body>
 </html>
