@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1. 额外标签</title>
+    <style>
+        .box {
+            width: 820px;
+            margin: 0 auto;
+            background-color: pink;
+            border: 1px solid green;
+        }
+        .content {
+            float: left;
+            margin-left: 2px;
+            width: 250px;
+            height: 250px;
+            background-color: blue;
+        }
+        /* 清除浮动 */
+        .fixed {
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="content"></div>
+        <div class="content"></div>
+        <div class="content"></div>
+        <div class="content"></div>
+        <!-- 清除浮动方式一：在浮动的最后一个元素后面加一个块级元素，并设置相应的样式 clear: both; 实现 -->
+        <div class="fixed"></div>
+    </div>
+    <div style="height:20px; background-color: aquamarine;">标准流盒子</div>
+</body>
+</html>

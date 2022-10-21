@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3. 父元素after伪元素</title>
+    <style>
+        .box {
+            width: 820px;
+            margin: 0 auto;
+            background-color: pink;
+            border: 1px solid green;
+        }
+        .content {
+            float: left;
+            margin-left: 2px;
+            width: 250px;
+            height: 250px;
+            background-color: blue;
+        }
+
+        /* 清除浮动 */
+        .clearFix:after {
+            content:"";
+            display: block;
+            height: 0;
+            clear: both;
+            visibility: hidden;
+        }
+        .clearFix {
+            /* IE6、7 专有 */
+            *zoom: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="box clearFix">
+        <div class="content"></div>
+        <div class="content"></div>
+        <div class="content"></div>
+        <div class="content"></div>
+    </div>
+    <div style="height:20px; background-color: aquamarine;">标准流盒子</div>
+</body>
+</html>
