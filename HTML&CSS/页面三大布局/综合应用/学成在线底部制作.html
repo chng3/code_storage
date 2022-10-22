@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>学成在线底部制作</title>
     <style>
+        body {
+            background-color: #f3f5f7;
+        }
         .w { 
             margin: 0 auto;
             width: 1200px;
@@ -23,19 +26,67 @@
         .mlist {
             margin-top: 10px;
             height: 555px;
-            background-color: green;
+            background-color: #fff;
         }
         .footer {
-            padding-top: 18px;
-            background-color: grey;
+            padding-top: 29px;
+            background-color: #fff;
             height: 397px;
             width: auto;
         }
         .footer .heart {
             height: 167px;
-            background-color: yellow;
+            background-color: #fff;
         }
+        .footer .heart .copyright {
+            background-color: #fff;
+            float: left;
+        }
+        .copyright>a {
+            display: block;
+            width: 118px;
+            height: 34px;
+            text-decoration: none;
+            border: 1px solid #1ca6fc;
+            text-align: center;
+            font-size: 16px;
+            line-height: 36px;
+            color: #1ca6fc;
+        }
+        .copyright>a:hover {
+            color: #fff;
+            background-color: #1ca6fc;
+        }
+        p {
+            color: #666666;
+            font-size: 12px;
+            margin: 23px 0 16px 0;
+        }
+        .footer .heart .right {
+         
+            float: right;
+        }
+        .footer .heart .right a {
+            font-size: 12px;
+            color: #333;
+            text-decoration: none;
+        }
+        .footer .heart .right a:hover {
+          color: #4db9fd;
+        }
+       
+        dd, dl {
+            margin: 0;
 
+        }
+        dl {
+            float: left;
+            margin-left: 145px;
+        }
+        dt {
+            margin-bottom: 7px;
+            color: #6e6e6e;
+        }
     </style>
 </head>
 <body>
@@ -43,7 +94,52 @@
     <div class="nav2 w"></div>
     <div class="mlist w"></div>
     <div class="footer w">
-        <div class="heart w"></div>
+        <div class="heart w">
+            <div class="copyright">
+                <img src="https://xhweb.site/xczx/images/logo.png" alt="学成在线logo">
+                <p>
+                    学成在线致力于普及中国最好的教育它与中国一流大学和机构合作提供在线课程。<br>
+					© 2017年XTCG Inc.保留所有权利。-沪ICP备15025210号
+                </p>
+                <a href="#">下载APP</a>
+            </div>
+            <div class="right">
+                <dl>
+                    <dt>关于学成网</dt>
+                    <dd>
+                        <a href="#">关于</a>
+                    </dd>
+                    <dd>
+                        <a href="#">工作机会</a>
+                    </dd>
+                    <dd>
+                        <a href="#">管理团队的</a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>
+                        新手指南
+                    </dt>
+                    <dd>
+                        <a href="#">新手</a>                      
+                    </dd>
+                    <dd>
+                        <a href="#">的新手</a>
+                    </dd>
+                    <dd>
+                        <a href="#">新指南</a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>
+                      合作伙伴
+                    </dt>
+                    <dd>
+                        <a href="#">赞助商</a>
+                    </dd>
+                </dl>
+            </div>
+        </div>
     </div>
 </body>
 </html>
