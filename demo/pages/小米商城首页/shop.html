@@ -14,6 +14,9 @@
         body {
             background-color: #f5f5f5;
         }
+        .container {
+            width: 1226px;
+        }
         .topbarBrWrp {
             position: relative;
             height: 120px;
@@ -33,39 +36,270 @@
         .hero {
             position: relative;
             height: 670px;
-            background-color: rgb(200, 200, 200);
+            background-color: #ffffff;
+        }
+        .hero .hero_main {
+            height: 460px;
+            background-color: skyblue;
+            margin: 0 auto;
+            margin-bottom: 14px;
+        }
+        .hero .hero_main .l_categories {
+            position: absolute;
+            width: 234px;
+            height: 460px;
+            background-color: rgb(153, 239, 239);
+        }
+        .hero .hero_main .slide {
+            width: 100%;
+            height: 100%;
+            background-color: rgb(29, 163, 163);
+        }
+        .hero .sub_info {
+            height: 170px;
+            background-color: blue;
+            margin: auto;
+        }
+        .hero .sub_info .left_channel_list {
+            float: left;
+            width: 234px;
+            height: 170px;
+            background-color: rgb(28, 201, 201);
+        }
+        .hero .sub_info .left_channel_list>ul li {
+            list-style: none;
+            width: 76px;
+            height: 83px;
+            background-color: red;
+            border: 1px solid;
+            float: left;
+        }
+        .hero .sub_info .right_promoList {
+            float: right;
+            width: 992px;
+            height: 170px;
+            background-color: rgb(106, 146, 146);
+        }
+        .hero .sub_info .right_promoList>ul li {
+            float: left;
+            list-style: none;
+            width: 316px;
+            height: 170px;
+            margin-left: 14.6px;
+            background-color: rgb(224, 238, 166);
         }
         .site_main {
-            height: 7235px;
+            padding-top: 26px;
+            width: 100%;
+            /* overflow: hidden; */
+            /* height: 7235px; */
             /* position: relative; */
-            background-color: rgb(190, 200, 200);
+        }
+        .site_main .site_banner_box {
+            height: 120px;
+            background-color: #ffffff;
+            margin: 0 auto;
+        }
+        .site_main .site_brick_box {
+            height: 686px;
+            background-color: #ffffff;
+            margin: 0 auto;
+            margin-top: 22px;
+        }
+        .site_main .site_brick_box .site_box_hd {
+            /* 父相 */
+            position: relative;
+            height: 58px;
+            background-color: rgb(190,80,80);
+        }
+        .site_main .site_brick_box .site_box_hd .more {
+            height: 58px;
+            width: 92px;
+            background-color: red;
+            /* 子绝 */
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        .site_main .site_brick_box .box_bd {
+            height: 628px;
+            background-color: yellowgreen;
+        }
+        .site_main .site_brick_box .box_bd .left {
+            float: left;
+            height: 100%;
+            width: 234px;
+            background-color: skyblue;
+        }
+        .site_main .site_brick_box .box_bd .right {
+            float: left;
+            height: 100%;
+            width: 992px;
+            background-color: #761422;
+        }
+        .site_main .site_brick_box .box_bd .right>ul li {
+            list-style: none;
+            float: left;
+            width: 234px;
+            height: 300px;
+            margin-left: 14px;
+            margin-bottom: 14px;
+            background-color: pink;
         }
         .site_footer {
             height: 472.5px;
             background-color: rgb(90, 90, 90);
         }
+        .site_footer .footer_service {
+            height: 80px;
+            background-color: #fff;
+            margin: 0 auto;
+        }
+        .site_footer .footer_links {
+            height: 392.5px;
+            background-color: #aaaaaa;
+            margin: 0 auto;
+        }
         .site_info {
             height: 205px;
             background-color: rgb(90, 90, 45);
         }
+        .home_toolbar {
+            position: fixed;
+            bottom: 70px;
+            right: 0;
+            z-index: 99;
+        }
+        .home_toolbar>div{
+            width: 84px;
+            height: 92px;
+            background-color: #ffffff;
+        }
     </style>
 </head>
 <body>
-    <!-- TODO: 往里面摆放盒子 -->
+    <!-- TODO: 往盒子里面放内容 -->
     <!-- 头部开始 -->
     <div class="header">
-        <div class="topbarBrWrp"></div>
-        <div class="site_topbar"></div>
-        <div class="site_header"></div>
+        <div class="topbarBrWrp">我是网页头部墙纸</div>
+        <div class="site_topbar">我是标签导航</div>
+        <div class="site_header">我是标题下拉列表</div>
     </div>
     <!-- 头部结束 -->
     <!-- 网页分类和轮播图 -->
-    <div class="hero"></div>
+    <div class="hero">
+        <div class="hero_main container">
+            <div class="l_categories"></div>
+            <div class="slide">
+            </div>
+        </div>
+        <div class="sub_info container">
+            <div class="left_channel_list">
+                <ul>
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                    <li>5</li>
+                    <li>6</li>
+                </ul>
+            </div>
+            <div class="right_promoList">
+                <ul>
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                </ul>
+            </div>
+        </div>
+    </div>
     <!-- 网页主内容开始 -->
-    <div class="site_main"></div>
+    <div class="site_main">
+        <!-- 海报条 -->
+        <div class="site_banner_box container"></div>
+        <!-- 两个商品列表块 -->
+        <div class="site_brick_box container">
+            <div class="site_box_hd">
+                <h2>222</h2>
+                <div class="more"></div>
+            </div>
+            <div class="box_bd">
+                <div class="left"></div>
+                <div class="right">
+                    <ul>
+                        <li>1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                        <li>5</li>
+                        <li>6</li>
+                        <li>7</li>
+                        <li>8</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="site_brick_box container">
+            <div class="site_box_hd">
+                <h2>222</h2>
+                <div class="more"></div>
+            </div>
+            <div class="box_bd">
+                <div class="left"></div>
+                <div class="right">
+                    <ul>
+                        <li>1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                        <li>5</li>
+                        <li>6</li>
+                        <li>7</li>
+                        <li>8</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+         <!-- 海报条 -->
+         <div class="site_banner_box container" style="margin-top: 22px;"></div>
+         <!-- 一个商品列表块 -->
+        <div class="site_brick_box container">
+            <div class="site_box_hd">
+                <h2>222</h2>
+                <div class="more"></div>
+            </div>
+            <div class="box_bd">
+                <div class="left"></div>
+                <div class="right">
+                    <ul>
+                        <li>1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                        <li>5</li>
+                        <li>6</li>
+                        <li>7</li>
+                        <li>8</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
     <!-- 网页尾部开始 -->
-    <div class="site_footer"></div>
+    <div class="site_footer">
+        <div class="footer_service container"></div>
+        <div class="footer_links container"></div>
+    </div>
     <!-- 网页尾部信息开始 -->
-    <div class="site_info"></div>
+    <div class="site_info">网页尾部信息</div>
+
+    <!-- 工具固定边栏 -->
+    <div class="home_toolbar">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    </div>
 </body>
 </html>
