@@ -17,6 +17,9 @@
         .container {
             width: 1226px;
         }
+        a, a:hover {
+            text-decoration: none;
+        }
         .topbarBrWrp {
             position: relative;
             height: 120px;
@@ -88,6 +91,10 @@
             margin-left: 14.6px;
             background-color: rgb(224, 238, 166);
         }
+        .hero .sub_info .right_promoList img {
+            width: 316px;
+            height: 170px;
+        }
         .site_main {
             padding-top: 26px;
             width: 100%;
@@ -102,7 +109,7 @@
         }
         .site_main .site_brick_box {
             height: 686px;
-            background-color: #ffffff;
+            background-color: rgba(0,0,0,0);
             margin: 0 auto;
             margin-top: 22px;
         }
@@ -110,20 +117,32 @@
             /* 父相 */
             position: relative;
             height: 58px;
-            background-color: rgb(190,80,80);
+            background-color: rgba(0,0,0,0);
+        }
+        .site_main .site_brick_box .site_box_hd .title {
+            line-height: 58px;
+            font-size: 22px;
+            font-weight: 200;
+            color: #333;
         }
         .site_main .site_brick_box .site_box_hd .more {
             height: 58px;
             width: 92px;
-            background-color: red;
+            /* background-color: red; */
             /* 子绝 */
             position: absolute;
             top: 0;
             right: 0;
         }
+        .site_main .site_brick_box .site_box_hd .more .more_link {
+            color: #424242;
+            font-size: 16px;
+            line-height: 58px;
+            /* transition: all .4s; */
+        }
         .site_main .site_brick_box .box_bd {
             height: 628px;
-            background-color: yellowgreen;
+            background-color: rgba(0,0,0,0);
         }
         .site_main .site_brick_box .box_bd .left {
             float: left;
@@ -131,12 +150,27 @@
             width: 234px;
             background-color: skyblue;
         }
+        .site_main .site_brick_box .box_bd .left>ul li {
+            list-style: none;
+        }
+        .site_main .site_brick_box .box_bd .left>ul li>a {
+            /* 将行内元素a转成行内块元素 */
+            display: block;
+            height: 614px;
+        }
         .site_main .site_brick_box .box_bd .right {
             float: left;
             height: 100%;
             width: 992px;
-            background-color: #761422;
+            background-color: rgba(0,0,0,0);
         }
+        /* .site_main .site_brick_box .box_bd .right .figure {
+            width: 160px;
+            height: 160px;
+        } */
+        /* .site_main .site_brick_box .box_bd .right img {
+            margin: 0 auto 18px;
+        } */
         .site_main .site_brick_box .box_bd .right>ul li {
             list-style: none;
             float: left;
@@ -144,7 +178,38 @@
             height: 300px;
             margin-left: 14px;
             margin-bottom: 14px;
-            background-color: pink;
+            background-color: #fff;
+        }
+        .site_main .site_brick_box .box_bd .right>ul li>a {
+            display: block;
+            height: 260px;
+            padding: 20px 0;
+            background: rgba(0,0,0,0);
+        }
+        .site_main .site_brick_box .box_bd .right .figure {
+            width: 160px;
+            height: 160px;
+            margin: 0 auto 18px;
+        }
+        .site_main .site_brick_box .box_bd .right .title {
+            margin: 0 10px 2px;
+            text-align: center;
+            font-size: 14px;
+            font-weight: 400;
+            color: #333;
+        }
+        .site_main .site_brick_box .box_bd .right .desc {
+            margin: 0 10px 10px;
+            text-align: center;
+            height: 18px;
+            font-size: 12px;
+            color: #b0b0b0;
+        }
+        .site_main .site_brick_box .box_bd .right .price {
+            margin: 0 10px 14px;
+            color: #ff6700;
+            text-align: center;
+            font-size: 14px;
         }
         .site_footer {
             height: 472.5px;
@@ -178,7 +243,7 @@
     </style>
 </head>
 <body>
-    <!-- TODO: 往盒子里面放内容 -->
+    <!-- TODO: 往盒子里面放内容 欠视频模块 -->
     <!-- 头部开始 -->
     <div class="header">
         <div class="topbarBrWrp">我是网页头部墙纸</div>
@@ -206,9 +271,21 @@
             </div>
             <div class="right_promoList">
                 <ul>
-                    <li>1</li>
-                    <li>2</li>
-                    <li>3</li>
+                    <li>
+                        <a href="#">
+                            <img src="img/sub_commodity1.jpg" alt="test">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/sub_commodity1.jpg" alt="test">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/sub_commodity2.jpg" alt="test">
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -216,25 +293,111 @@
     <!-- 网页主内容开始 -->
     <div class="site_main">
         <!-- 海报条 -->
-        <div class="site_banner_box container"></div>
+        <div class="site_banner_box container">
+            <a href="#">
+                <img src="img/box_banner1.webp" alt="test" width="1226" height="120">
+            </a>
+        </div>
         <!-- 两个商品列表块 -->
         <div class="site_brick_box container">
             <div class="site_box_hd">
-                <h2>222</h2>
-                <div class="more"></div>
+                <h2 class="title">手机</h2>
+                <div class="more">
+                    <a class="more_link" href="#">查看更多</a>
+                </div>
             </div>
             <div class="box_bd">
-                <div class="left"></div>
+                <div class="left">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <img width="" height="614" src="img/side_commodity1.jpg" alt="test">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
                 <div class="right">
                     <ul>
-                        <li>1</li>
-                        <li>2</li>
-                        <li>3</li>
-                        <li>4</li>
-                        <li>5</li>
-                        <li>6</li>
-                        <li>7</li>
-                        <li>8</li>
+                        <li>
+                            <a href="#">
+                                <div class="figure">
+                                    <img width="160" height="160" src="img/commdity_list1.png" alt="test">
+                                </div>
+                                <h3 class="title">Redmi Note 11 5G</h3>
+                                <p class="desc">5000mAh大电量</p>
+                                <p class="price">1199元起</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="figure">
+                                    <img width="160" height="160" src="img/commdity_list1.png" alt="test">
+                                </div>
+                                <h3 class="title">Redmi Note 11 5G</h3>
+                                <p class="desc">5000mAh大电量</p>
+                                <p class="price">1199元起</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="figure">
+                                    <img width="160" height="160" src="img/commdity_list1.png" alt="test">
+                                </div>
+                                <h3 class="title">Redmi Note 11 5G</h3>
+                                <p class="desc">5000mAh大电量</p>
+                                <p class="price">1199元起</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="figure">
+                                    <img width="160" height="160" src="img/commdity_list1.png" alt="test">
+                                </div>
+                                <h3 class="title">Redmi Note 11 5G</h3>
+                                <p class="desc">5000mAh大电量</p>
+                                <p class="price">1199元起</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="figure">
+                                    <img width="160" height="160" src="img/commdity_list1.png" alt="test">
+                                </div>
+                                <h3 class="title">Redmi Note 11 5G</h3>
+                                <p class="desc">5000mAh大电量</p>
+                                <p class="price">1199元起</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="figure">
+                                    <img width="160" height="160" src="img/commdity_list1.png" alt="test">
+                                </div>
+                                <h3 class="title">Redmi Note 11 5G</h3>
+                                <p class="desc">5000mAh大电量</p>
+                                <p class="price">1199元起</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="figure">
+                                    <img width="160" height="160" src="img/commdity_list1.png" alt="test">
+                                </div>
+                                <h3 class="title">Redmi Note 11 5G</h3>
+                                <p class="desc">5000mAh大电量</p>
+                                <p class="price">1199元起</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="figure">
+                                    <img width="160" height="160" src="img/commdity_list1.png" alt="test">
+                                </div>
+                                <h3 class="title">Redmi Note 11 5G</h3>
+                                <p class="desc">5000mAh大电量</p>
+                                <p class="price">1199元起</p>
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -263,7 +426,7 @@
          <!-- 海报条 -->
          <div class="site_banner_box container" style="margin-top: 22px;"></div>
          <!-- 一个商品列表块 -->
-        <div class="site_brick_box container">
+         <div class="site_brick_box container">
             <div class="site_box_hd">
                 <h2>222</h2>
                 <div class="more"></div>
@@ -284,8 +447,11 @@
                 </div>
             </div>
         </div>
-
+        <div class="site_video_box">
+            <!-- TODO: -->
+        </div>
     </div>
+    <!-- 网页 -->
     <!-- 网页尾部开始 -->
     <div class="site_footer">
         <div class="footer_service container"></div>
