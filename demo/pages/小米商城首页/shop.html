@@ -97,8 +97,9 @@
         }
         .site_main {
             padding-top: 26px;
+            padding-bottom: 16px;
             width: 100%;
-            /* overflow: hidden; */
+            overflow: hidden;
             /* height: 7235px; */
             /* position: relative; */
         }
@@ -113,19 +114,86 @@
             margin: 0 auto;
             margin-top: 22px;
         }
-        .site_main .site_brick_box .site_box_hd {
+        .site_main .site_video_box {
+            margin: 0 auto;
+            margin-top: 22px;
+        }
+        .site_main .site_video_box .video_list {
+            width: 1240px;
+            height: 285px;
+            list-style-type: none;
+        }
+        .site_main .site_video_box .video_list .figure_img {
+            /* 父相 */
+            position: relative;
+            width: 296px;
+            height: 180px;
+            margin: 0 0 28px;
+            background-color: red;
+        }
+        .site_main .site_video_box .video_list .title {
+            margin: 0 14px 6px;
+            font-size: 14px;
+            font-weight: 400;
+            text-align: center;
+            color: #333;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+        .site_main .site_video_box .video_list .desc {
+            height: 18px;
+            margin: 0 14px;
+            font-size: 12px;
+            color: #b0b0b0;
+            /* white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden; */
+        }
+        .site_main .site_video_box .video_list .play {
+            /* 子绝 */
+            position: absolute;
+            left: 20px;
+            bottom: 10px;
+            width: 32px;
+            height: 20px;
+            border: 2px solid #fff;
+            border-radius: 12px;
+            background-color: #424242;
+            background-color: rgba(0,0,0,.6);
+            color: #fff;
+            /* -webkit-transition: all .2s; */
+            /* transition: all .2s; */
+            /* overflow: hidden; */
+        }
+        .site_main .site_video_box .video_list>li {
+            float: left;
+            /* position: relative; */
+            width: 296px;
+            height: 285px;
+            margin-left: 14px;
+            margin-bottom: 14px;
+            text-align: center;
+            background: #fff;
+            /* -webkit-transition: all .2s linear; */
+            /* transition: all .2s linear; */
+        }
+        .site_main .site_video_box .video_list>li:first-child {
+            margin-left: 0;
+        }
+        .site_box_hd {
             /* 父相 */
             position: relative;
             height: 58px;
             background-color: rgba(0,0,0,0);
         }
-        .site_main .site_brick_box .site_box_hd .title {
+        .site_box_hd .title {
             line-height: 58px;
             font-size: 22px;
             font-weight: 200;
             color: #333;
         }
-        .site_main .site_brick_box .site_box_hd .more {
+        .site_box_hd .more {
             height: 58px;
             width: 92px;
             /* background-color: red; */
@@ -134,7 +202,7 @@
             top: 0;
             right: 0;
         }
-        .site_main .site_brick_box .site_box_hd .more .more_link {
+        .site_box_hd .more .more_link {
             color: #424242;
             font-size: 16px;
             line-height: 58px;
@@ -243,7 +311,7 @@
     </style>
 </head>
 <body>
-    <!-- TODO: 往盒子里面放内容 欠视频模块 -->
+    <!-- TODO: 往盒子里面放内容 -->
     <!-- 头部开始 -->
     <div class="header">
         <div class="topbarBrWrp">我是网页头部墙纸</div>
@@ -405,7 +473,9 @@
         <div class="site_brick_box container">
             <div class="site_box_hd">
                 <h2>222</h2>
-                <div class="more"></div>
+                <div class="more">
+                    <a class="more_link" href="#">查看更多</a>
+                </div>
             </div>
             <div class="box_bd">
                 <div class="left"></div>
@@ -429,7 +499,9 @@
          <div class="site_brick_box container">
             <div class="site_box_hd">
                 <h2>222</h2>
-                <div class="more"></div>
+                <div class="more">
+                    <a class="more_link" href="#">查看更多</a>
+                </div>
             </div>
             <div class="box_bd">
                 <div class="left"></div>
@@ -447,10 +519,61 @@
                 </div>
             </div>
         </div>
-        <div class="site_video_box">
-            <!-- TODO: -->
+        <!-- 主内容底部视频模块 -->
+        <div class="site_video_box container">
+            <div class="site_box_hd">
+                <h2 class="title">手机</h2>
+                <div class="more">
+                    <a class="more_link" href="#">查看更多</a>
+                </div>
+            </div>
+            <div class="site_box_bd">
+                <ul class="video_list">
+                    <li>
+                        <a href="#">
+                            <div class="figure_img">
+                                <img width="296" height="180" src="img/video_list1.webp" alt="test">
+                                <span class="play"></span>
+                            </div>
+                            <h3 class="title">2021年春季新品发布会第一场</h3>
+                            <p class="desc">1111</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="figure_img">
+                                <img width="296" height="180" src="img/video_list1.webp" alt="test">
+                                <span class="play"></span>
+                            </div>
+                            <h3 class="title">2021年春季新品发布会第一场</h3>
+                            <p class="desc">1111</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="figure_img">
+                                <img width="296" height="180" src="img/video_list1.webp" alt="test">
+                                <span class="play"></span>
+                            </div>
+                            <h3 class="title">2021年春季新品发布会第一场</h3>
+                            <p class="desc">1111</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="figure_img">
+                                <img width="296" height="180" src="img/video_list1.webp" alt="test">
+                                <span class="play"></span>
+                            </div>
+                            <h3 class="title">2021年春季新品发布会第一场</h3>
+                            <p class="desc">1111</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
+    <!-- 结束 -->
     <!-- 网页 -->
     <!-- 网页尾部开始 -->
     <div class="site_footer">
