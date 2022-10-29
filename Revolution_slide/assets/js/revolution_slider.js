@@ -25,7 +25,7 @@ var custom_js = {
             sliderType: "standard",
             sliderLayout: "fullwidth",
             dottedOverlay: "none",
-            delay: 3000, // 每一张幻灯片停留的时间 1000ms 毫秒 = 1s 秒
+            delay: 4000, // 每一张幻灯片停留的时间 1000ms 毫秒 = 1s 秒
             navigation: {
                 keyboardNavigation: "off",
                 keyboard_direction: "horizontal",
