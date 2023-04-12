@@ -1,48 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>小米商城首页</title>
+    <script src="./shop.js"></script>
     <style>
         * {
             margin: 0;
             padding: 0;
         }
+
         /* 页面基础配置 */
         body {
             /* 基本背景色 */
             background-color: #f5f5f5;
         }
+
         .container {
             width: 1226px;
         }
-        a, a:hover {
+
+        a,
+        a:hover {
             text-decoration: none;
         }
+
         .topbarBrWrp {
             position: relative;
             height: 120px;
             width: 100%;
             background-color: grey;
         }
+
         .site_topbar {
             position: relative;
             height: 40px;
             background-color: rgb(144, 134, 134);
             font-size: 12px;
         }
+
         .site_topbar .container {
             position: relative;
             margin: 0 auto;
         }
+
         .site_topbar .container .topbar_nav {
             float: left;
             height: 40px;
             line-height: 40px;
             background-color: #fff;
         }
+
         .site_topbar .container .topbar_cart {
             position: relative;
             float: right;
@@ -54,6 +65,7 @@
             font-size: 12px;
             background-color: red;
         }
+
         .site_topbar .container .topbar_info {
             position: relative;
             float: right;
@@ -61,20 +73,25 @@
             line-height: 40px;
             background-color: yellow;
         }
+
         .site_header {
             position: relative;
             height: 100px;
             background-color: rgb(144, 200, 200);
         }
+
         .site_header .container {
             position: relative;
+            height: 100px;
             margin: 0 auto;
         }
+
         .site_header .header_logo {
             float: left;
             width: 62px;
             margin-top: 22px;
         }
+
         .site_header .logo {
             position: relative;
             /* 转化成行内块元素 */
@@ -84,10 +101,12 @@
             overflow: hidden;
             background-color: #fff;
         }
+
         .site_header .header_nav {
             float: left;
             width: 850px;
         }
+
         .site_header .header_nav .nav_list {
             position: relative;
             padding: 12px 0 0 30px;
@@ -98,15 +117,18 @@
             font-size: 16px;
             /* z-index: 10; */
         }
+
         .site_header .header_nav .nav_list .nav_category {
             /* position: relative; */
             float: left;
             width: 127px;
             padding-right: 15px;
         }
+
         .site_header .header_nav .nav_list .nav_item {
             float: left;
         }
+
         .site_header .header_nav .nav_list .nav_item .link {
             display: block;
             padding: 26px 10px 38px;
@@ -114,11 +136,13 @@
             /* -webkit-transition: color .2s; */
             /* transition: color .2s; */
         }
+
         .site_header .header_search {
             float: right;
             width: 296px;
             margin-top: 25px;
         }
+
         .site_header .header_search .search_form {
             position: relative;
             width: 296px;
@@ -126,17 +150,33 @@
             z-index: 20;
             background-color: #fff;
         }
+
+        .site_header .header_nav .nav_list .nav_item .link:hover {
+            color: #fd6821;
+        }
+
+        .site_header .J_navMenu {
+            position: absolute;
+            width: 1680px;
+            height: 229px;
+            background-color: #fff;
+            z-index: 10;
+            border-top: 1px solid #e0e0e0;
+        }
+
         .hero {
             position: relative;
             height: 670px;
             background-color: #ffffff;
         }
+
         .hero .hero_main {
             height: 460px;
             background-color: skyblue;
             margin: 0 auto;
             margin-bottom: 14px;
         }
+
         .hero .hero_main .l_categories {
             position: absolute;
             width: 234px;
@@ -145,12 +185,14 @@
             font-size: 14px;
             z-index: 1;
         }
+
         .hero .hero_main .l_categories .categories_list {
             height: 420px;
             list-style-type: none;
             padding: 20px 0;
-            background: rgba(105,101,101,.6);
+            background: rgba(105, 101, 101, .6);
         }
+
         .hero .hero_main .l_categories .categories_list .title {
             /* position: relative; */
             display: block;
@@ -159,7 +201,8 @@
             line-height: 42px;
             color: #fff;
         }
-        .hero .hero_main .l_categories .categories_list .title em[class*=iconfont]{
+
+        .hero .hero_main .l_categories .categories_list .title em[class*=iconfont] {
             position: absolute;
             top: 12px;
             right: 20px;
@@ -167,6 +210,7 @@
             line-height: 16px;
             color: #e0e0e0;
         }
+
         .hero .hero_main .l_categories .categories_list .title:hover {
             background-color: #ff6700;
         }
@@ -177,7 +221,9 @@
             height: 100%;
             background-color: rgb(29, 163, 163);
         }
-        .hero .hero_main .slide .swiper_button_prev,.hero .hero_main .slide .swiper_button_next{
+
+        .hero .hero_main .slide .swiper_button_prev,
+        .hero .hero_main .slide .swiper_button_next {
             /* background: url(); */
             background-color: #fff;
             position: absolute;
@@ -190,21 +236,25 @@
             cursor: pointer;
             outline: none;       */
         }
+
         .hero .hero_main .slide .swiper_button_next {
             left: auto;
             right: 0;
         }
+
         .hero .sub_info {
             height: 170px;
             background-color: blue;
             margin: auto;
         }
+
         .hero .sub_info .left_channel_list {
             float: left;
             width: 234px;
             height: 170px;
             background-color: rgb(28, 201, 201);
         }
+
         .hero .sub_info .left_channel_list>ul li {
             list-style: none;
             width: 76px;
@@ -213,12 +263,14 @@
             border: 1px solid;
             float: left;
         }
+
         .hero .sub_info .right_promoList {
             float: right;
             width: 992px;
             height: 170px;
             background-color: rgb(106, 146, 146);
         }
+
         .hero .sub_info .right_promoList>ul li {
             float: left;
             list-style: none;
@@ -227,10 +279,12 @@
             margin-left: 14.6px;
             background-color: rgb(224, 238, 166);
         }
+
         .hero .sub_info .right_promoList img {
             width: 316px;
             height: 170px;
         }
+
         .site_main {
             padding-top: 26px;
             padding-bottom: 16px;
@@ -239,26 +293,31 @@
             /* height: 7235px; */
             /* position: relative; */
         }
+
         .site_main .site_banner_box {
             height: 120px;
             background-color: #ffffff;
             margin: 0 auto;
         }
+
         .site_main .site_brick_box {
             height: 686px;
-            background-color: rgba(0,0,0,0);
+            background-color: rgba(0, 0, 0, 0);
             margin: 0 auto;
             margin-top: 22px;
         }
+
         .site_main .site_video_box {
             margin: 0 auto;
             margin-top: 22px;
         }
+
         .site_main .site_video_box .video_list {
             width: 1240px;
             height: 285px;
             list-style-type: none;
         }
+
         .site_main .site_video_box .video_list .figure_img {
             /* 父相 */
             position: relative;
@@ -267,6 +326,7 @@
             margin: 0 0 28px;
             background-color: red;
         }
+
         .site_main .site_video_box .video_list .title {
             margin: 0 14px 6px;
             font-size: 14px;
@@ -277,6 +337,7 @@
             text-overflow: ellipsis;
             overflow: hidden;
         }
+
         .site_main .site_video_box .video_list .desc {
             height: 18px;
             margin: 0 14px;
@@ -286,6 +347,7 @@
             text-overflow: ellipsis;
             overflow: hidden; */
         }
+
         .site_main .site_video_box .video_list .play {
             /* 子绝 */
             position: absolute;
@@ -296,12 +358,13 @@
             border: 2px solid #fff;
             border-radius: 12px;
             background-color: #424242;
-            background-color: rgba(0,0,0,.6);
+            background-color: rgba(0, 0, 0, .6);
             color: #fff;
             /* -webkit-transition: all .2s; */
             /* transition: all .2s; */
             /* overflow: hidden; */
         }
+
         .site_main .site_video_box .video_list>li {
             float: left;
             /* position: relative; */
@@ -314,21 +377,25 @@
             /* -webkit-transition: all .2s linear; */
             /* transition: all .2s linear; */
         }
+
         .site_main .site_video_box .video_list>li:first-child {
             margin-left: 0;
         }
+
         .site_box_hd {
             /* 父相 */
             position: relative;
             height: 58px;
-            background-color: rgba(0,0,0,0);
+            background-color: rgba(0, 0, 0, 0);
         }
+
         .site_box_hd .title {
             line-height: 58px;
             font-size: 22px;
             font-weight: 200;
             color: #333;
         }
+
         .site_box_hd .more {
             height: 58px;
             width: 92px;
@@ -338,36 +405,43 @@
             top: 0;
             right: 0;
         }
+
         .site_box_hd .more .more_link {
             color: #424242;
             font-size: 16px;
             line-height: 58px;
             /* transition: all .4s; */
         }
+
         .site_main .site_brick_box .box_bd {
             height: 628px;
-            background-color: rgba(0,0,0,0);
+            background-color: rgba(0, 0, 0, 0);
         }
+
         .site_main .site_brick_box .box_bd .left {
             float: left;
             height: 100%;
             width: 234px;
             background-color: skyblue;
         }
+
         .site_main .site_brick_box .box_bd .left>ul li {
             list-style: none;
         }
+
         .site_main .site_brick_box .box_bd .left>ul li>a {
             /* 将行内元素a转成行内块元素 */
             display: block;
             height: 614px;
         }
+
         .site_main .site_brick_box .box_bd .right {
             float: left;
             height: 100%;
             width: 992px;
-            background-color: rgba(0,0,0,0);
+            background-color: rgba(0, 0, 0, 0);
         }
+
         /* .site_main .site_brick_box .box_bd .right .figure {
             width: 160px;
             height: 160px;
@@ -384,17 +458,20 @@
             margin-bottom: 14px;
             background-color: #fff;
         }
+
         .site_main .site_brick_box .box_bd .right>ul li>a {
             display: block;
             height: 260px;
             padding: 20px 0;
-            background: rgba(0,0,0,0);
+            background: rgba(0, 0, 0, 0);
         }
+
         .site_main .site_brick_box .box_bd .right .figure {
             width: 160px;
             height: 160px;
             margin: 0 auto 18px;
         }
+
         .site_main .site_brick_box .box_bd .right .title {
             margin: 0 10px 2px;
             text-align: center;
@@ -402,6 +479,7 @@
             font-weight: 400;
             color: #333;
         }
+
         .site_main .site_brick_box .box_bd .right .desc {
             margin: 0 10px 10px;
             text-align: center;
@@ -409,43 +487,86 @@
             font-size: 12px;
             color: #b0b0b0;
         }
+
         .site_main .site_brick_box .box_bd .right .price {
             margin: 0 10px 14px;
             color: #ff6700;
             text-align: center;
             font-size: 14px;
         }
+
         .site_footer {
             height: 472.5px;
-            background-color: rgb(90, 90, 90);
+            background-color: rgb(255, 255, 255);
         }
+
         .site_footer .footer_service {
-            height: 80px;
-            background-color: #fff;
+            height: 25px;
             margin: 0 auto;
+            border-bottom: 1px solid #e0e0e0;
+            padding: 27px 0;
         }
+
+        .site_footer .footer_service>ul li {
+            list-style: none;
+            float: left;
+            height: 25px;
+            width: 19.8%;
+            font-size: 16px;
+            line-height: 25px;
+            text-align: center;
+            border-left: 1px solid #e0e0e0;
+        }
+
+        /* 清除列表中的第一项的左边框格式 */
+        .site_footer .footer_service>ul li:first-child{
+            border-left: 0;
+        }
+
         .site_footer .footer_links {
             height: 392.5px;
-            background-color: #aaaaaa;
             margin: 0 auto;
+            padding: 40px 0;
         }
+
+        .site_footer .footer_links .col_links {
+            float: left;
+            width: 160px;
+            /* margin: 0; */
+        }
+
+        .site_footer .footer_links .col_links dt {
+            margin: -1px 0 26px;
+            font-size: 14px;
+            line-height: 1.25;
+            color: #424242;
+        }
+
+        .site_footer .footer_links .col_links dd {
+          margin: 10px 0 0;
+          font-size: 12px;
+        }
+
         .site_info {
             height: 205px;
             background-color: rgb(90, 90, 45);
         }
+
         .home_toolbar {
             position: fixed;
             bottom: 70px;
             right: 0;
             z-index: 99;
         }
-        .home_toolbar>div{
+
+        .home_toolbar>div {
             width: 84px;
             height: 92px;
             background-color: #ffffff;
         }
     </style>
 </head>
+
 <body>
     <!-- 头部开始 -->
     <div class="header">
@@ -547,6 +668,8 @@
                     <form action="" class="search_form"></form>
                 </div>
             </div>
+            <!-- TODO: 暂时起名，下拉列表菜单 待研究-->
+            <div class="J_navMenu" style="display:none"></div>
         </div>
     </div>
     <!-- 头部结束 -->
@@ -781,10 +904,10 @@
                 </div>
             </div>
         </div>
-         <!-- 海报条 -->
-         <div class="site_banner_box container" style="margin-top: 22px;"></div>
-         <!-- 一个商品列表块 -->
-         <div class="site_brick_box container">
+        <!-- 海报条 -->
+        <div class="site_banner_box container" style="margin-top: 22px;"></div>
+        <!-- 一个商品列表块 -->
+        <div class="site_brick_box container">
             <div class="site_box_hd">
                 <h2>222</h2>
                 <div class="more">
@@ -865,10 +988,68 @@
     <!-- 网页 -->
     <!-- 网页尾部开始 -->
     <div class="site_footer">
-        <div class="footer_service container"></div>
-        <div class="footer_links container"></div>
+        <div class="footer_service container">
+            <ul class="list_service">
+                <li><a href="#">预约维修服务</a></li>
+                <li><a href="#">预约维修服务</a></li>
+                <li><a href="#">预约维修服务</a></li>
+                <li><a href="#">预约维修服务</a></li>
+                <li><a href="#">预约维修服务</a></li>
+            </ul>
+        </div>
+
+        <div class="footer_links container">
+            <dl class="col_links">
+                <dt></dt>
+            </dl>
+            <dl class="col_links">
+                <dt>选购指南</dt>
+                <dd><a href="#">电视</a></dd>
+                <dd><a href="#">电视</a></dd>
+                <dd><a href="#">电视</a></dd>
+                <dd><a href="#">电视</a></dd>
+                <dd><a href="#">电视</a></dd>
+                <dd><a href="#">电视</a></dd>
+            </dl>
+            <dl class="col_links">
+                <dt>选购指南</dt>
+                <dd><a href="#">电视</a></dd>
+                <dd><a href="#">电视</a></dd>
+                <dd><a href="#">电视</a></dd>
+                <dd><a href="#">电视</a></dd>
+                <dd><a href="#">电视</a></dd>
+                <dd><a href="#">电视</a></dd>
+            </dl>
+            <dl class="col_links">
+                <dt>选购指南</dt>
+                <dd><a href="#">电视</a></dd>
+                <dd><a href="#">电视</a></dd>
+                <dd><a href="#">电视</a></dd>
+                <dd><a href="#">电视</a></dd>
+                <dd><a href="#">电视</a></dd>
+                <dd><a href="#">电视</a></dd>
+            </dl>
+            <dl class="col_links">
+                <dt>选购指南</dt>
+                <dd><a href="#">电视</a></dd>
+                <dd><a href="#">电视</a></dd>
+                <dd><a href="#">电视</a></dd>
+                <dd><a href="#">电视</a></dd>
+                <dd><a href="#">电视</a></dd>
+                <dd><a href="#">电视</a></dd>
+            </dl>
+            <dl class="col_links">
+                <dt>选购指南</dt>
+                <dd><a href="#">电视</a></dd>
+                <dd><a href="#">电视</a></dd>
+                <dd><a href="#">电视</a></dd>
+                <dd><a href="#">电视</a></dd>
+                <dd><a href="#">电视</a></dd>
+                <dd><a href="#">电视</a></dd>
+            </dl>
+        </div>
     </div>
-    <!-- 网页尾部信息开始 -->
+    <!-- TODO: 网页尾部信息开始 -->
     <div class="site_info">网页尾部信息</div>
 
     <!-- 工具固定边栏 -->
@@ -879,4 +1060,9 @@
         <div>4</div>
     </div>
 </body>
+<script type="text/javascript">
+
+
+</script>
+
 </html>
